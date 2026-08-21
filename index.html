@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dixon Choi — AI, Data &amp; Automation</title>
+<meta name="description" content="Dixon Choi builds the AI, data and automation that procurement teams run on. Procurement PMO at Gategroup, founder of DDX Consulting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<canvas id="hills" aria-hidden="true"></canvas>
+<div class="veil" aria-hidden="true"></div>
+
+<main class="sheet">
+
+  <!-- ============ masthead ============ -->
+  <header class="masthead">
+    <div class="brand">Dixon Choi</div>
+    <nav class="nav">
+      <a href="#stack">Stack</a>
+      <a href="#skills">Skills</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ============ hero ============ -->
+  <section class="hero">
+    <div class="hero-top">
+      <img class="portrait" src="assets/dixon.jpg"
+           srcset="assets/dixon.jpg 1x, assets/dixon@2x.jpg 2x"
+           width="88" height="88" alt="Dixon Choi">
+      <div>
+        <div class="eyebrow"><span class="tick"></span>AI · Data · Automation</div>
+        <div class="hero-name">Dixon Choi</div>
+      </div>
+    </div>
+    <h1>I build the AI that procurement teams actually run on.</h1>
+    <div class="hero-body">
+      <p>Sole technical lead in a two-person procurement PMO at Gategroup, covering seven European countries: spend data, workflow automation, and LLM agents wired into the systems those teams already work in. On the side I run <a href="https://ddx-consulting.com">DDX Consulting</a>, where I build automations for other companies and then run them.</p>
+      <div class="hero-actions">
+        <a class="btn" href="assets/Dixon-Choi-CV.pdf" download>Download CV</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+    <ul class="meta">
+      <li>
+        <svg viewBox="0 0 24 24"><path d="M12 21s-7-5.4-7-10.5A7 7 0 0 1 19 10.5C19 15.6 12 21 12 21Z"/><circle cx="12" cy="10.5" r="2.5"/></svg>
+        London, UK
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 6.5 9 6 9-6"/></svg>
+        <a href="mailto:choimanto62@gmail.com">choimanto62@gmail.com</a>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 10.5V17"/><path d="M7.5 7.2v.1"/><path d="M11.5 17v-3.6a2.4 2.4 0 0 1 4.8 0V17"/></svg>
+        <a href="https://www.linkedin.com/in/man-to-choi-87bab522a">LinkedIn</a>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24"><path d="M9 20.5c-4.2 1.4-4.2-2.4-5.9-2.9m11.8 4.9v-3.8a3.3 3.3 0 0 0-.9-2.6c3-.3 6.1-1.5 6.1-6.6a5.1 5.1 0 0 0-1.4-3.5 4.8 4.8 0 0 0-.1-3.6s-1.1-.3-3.8 1.4a13 13 0 0 0-6.8 0C5.3 2.1 4.2 2.4 4.2 2.4a4.8 4.8 0 0 0-.1 3.6 5.1 5.1 0 0 0-1.4 3.6c0 5 3.1 6.2 6.1 6.5a3.3 3.3 0 0 0-.9 2.6v3.8"/></svg>
+        <a href="https://github.com/Dixonchoi22">GitHub</a>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ============ the stack, as a live diagram ============ -->
+  <section id="stack" class="section">
+    <div class="section-head">
+      <h2>The stack I build on</h2>
+      <p class="lede">Scattered source systems on the left, the automation layer I build in the middle, and the place a decision gets made on the right. Nothing reaches the outside world without a person approving it.</p>
+    </div>
+
+    <div class="diagram" id="diagram">
+      <div class="col col-in">
+        <div class="node" data-node="sap">
+          <span class="ring"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9.5h18M9 9.5V19"/></svg></span>
+          <span class="node-label">SAP</span>
+        </div>
+        <div class="node" data-node="d365">
+          <span class="ring"><svg class="ico" viewBox="0 0 24 24"><path d="M4 7.2 12 4l8 3.2v9.6L12 20l-8-3.2Z"/><path d="M12 10.4v9.6M4 7.2l8 3.2 8-3.2"/></svg></span>
+          <span class="node-label">Dynamics 365</span>
+        </div>
+        <div class="node" data-node="sp">
+          <span class="ring"><svg class="ico" viewBox="0 0 24 24"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4H13l3 3h2.5A1.5 1.5 0 0 1 20 8.5v9A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5Z"/><path d="M8.5 12.5h7M8.5 15.5h4.5"/></svg></span>
+          <span class="node-label">SharePoint</span>
+        </div>
+        <div class="node" data-node="xl">
+          <span class="ring"><svg class="ico" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="1.8"/><path d="M3.5 9.5h17M3.5 14.5h17M9.5 4.5v15M15 4.5v15"/></svg></span>
+          <span class="node-label">Excel · Power Query</span>
+        </div>
+      </div>
+
+      <div class="col col-hub">
+        <div class="hub" data-node="hub">
+          <span class="ring ring-lg"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2.5v19M2.5 12h19M5.2 5.2l13.6 13.6M18.8 5.2 5.2 18.8"/></svg></span>
+          <div class="hub-title">LLM agents &amp; MCP servers</div>
+          <div class="hub-tools">
+            <span>Claude</span><span>Agent SDK</span><span>MCP</span><span>n8n</span><span>Power Automate</span><span>Python</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="col col-out">
+        <div class="node" data-node="pbi">
+          <span class="ring ring-cool"><svg class="ico" viewBox="0 0 24 24"><path d="M3.5 20.5V4M3.5 20.5H21"/><rect x="7" y="12.5" width="3.2" height="5.5"/><rect x="12.4" y="9" width="3.2" height="9"/><rect x="17.8" y="5.5" width="3.2" height="12.5"/></svg></span>
+          <span class="node-label">Power BI</span>
+        </div>
+        <div class="node" data-node="appr">
+          <span class="ring ring-cool"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6.5 9.5 17 4.5 12"/></svg></span>
+          <span class="node-label">Human approval</span>
+        </div>
+        <div class="node" data-node="teams">
+          <span class="ring ring-cool"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="13" rx="2.5"/><path d="M8 17.5 7 21l4.5-3.5"/><path d="M8 9h8M8 12.5h5"/></svg></span>
+          <span class="node-label">Teams · Outlook</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ skills ============ -->
+  <section id="skills" class="section">
+    <div class="section-head">
+      <h2>Tools I work in</h2>
+    </div>
+
+    <div class="skills">
+      <div class="skill-group">
+        <h3><span class="rule"></span>AI &amp; automation</h3>
+        <ul class="chips">
+          <li>Claude / Anthropic API</li><li>MCP servers</li><li>Claude Agent SDK</li>
+          <li>Gemini</li><li>GenAI solution design</li><li>n8n</li><li>Power Automate</li>
+          <li>Intelligent automation</li><li>Prompt engineering</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3><span class="rule rule-cool"></span>Data &amp; BI</h3>
+        <ul class="chips">
+          <li>Power BI</li><li>Power Query (M)</li><li>DAX</li><li>SQL</li>
+          <li>Python · pandas</li><li>Tableau</li><li>GIS / shapefiles</li>
+          <li>Machine-learning forecasting</li><li>Excel data models</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3><span class="rule"></span>Procurement &amp; systems</h3>
+        <ul class="chips">
+          <li>SAP</li><li>Dynamics 365</li><li>SharePoint</li><li>Power Platform</li>
+          <li>Source-to-Pay / P2P</li><li>Spend analytics</li>
+          <li>Supplier relationship management</li><li>Budgeting &amp; KPI development</li>
+          <li>ERP data consolidation</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3><span class="rule rule-cool"></span>Build</h3>
+        <ul class="chips">
+          <li>TypeScript</li><li>Next.js</li><li>React</li><li>Prisma</li>
+          <li>Postgres</li><li>React Native · Expo</li><li>Firebase</li><li>Git</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ experience ============ -->
+  <section id="work" class="section">
+    <div class="section-head row">
+      <h2>Experience</h2>
+      <span class="years">Nov 2021 — present</span>
+    </div>
+
+    <ol class="timeline">
+      <li>
+        <div class="when">Apr 2025 —<br><span class="when-sub">Present</span></div>
+        <div class="what">
+          <h3>PMO Europe Procurement Analyst</h3>
+          <div class="where">Gategroup, London, UK</div>
+          <ul class="bullets">
+            <li>Sole technical lead in a two-person Procurement PMO driving an end-to-end digital transformation across seven European countries, owning solution design, build and delivery of the process, data, automation and AI the procurement teams run on.</li>
+            <li>Designed and deployed in-house, LLM-based AI agents for the European procurement team: contract review, supplier discovery and negotiation support.</li>
+            <li>Built Model Context Protocol (MCP) servers to connect AI agents securely to internal procurement data and systems (spend, contracts, suppliers), enabling AI-driven workflows on live data.</li>
+            <li>Automated core procurement workflows with Power Automate: supplier communications, invoice and rebate collection, and budget submission.</li>
+            <li>Built a full Power BI reporting suite from scratch covering direct and indirect spend, inflation, impact and budgeting, consolidating data from multiple ERP systems using Power Query (M), DAX and SQL.</li>
+            <li>Built the global Supplier Relationship Management (SRM) programme from scratch, defining the process and delivering the supporting solution in Power Automate, SharePoint and Power BI, including supplier scorecards and performance reporting used across the European teams.</li>
+            <li>Developed KPI frameworks quantifying procurement impact and cost-avoidance beyond headline savings, supporting category and sourcing decisions.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="when">2025 —<br><span class="when-sub">Present</span></div>
+        <div class="what">
+          <h3>Founder</h3>
+          <div class="where">DDX Consulting · <a href="https://ddx-consulting.com">ddx-consulting.com</a></div>
+          <p>Custom ERP and process design, systems integration and automation for procurement, supply chain, sales and marketing teams. DDX builds them, then runs them. Clients watch every run and sign off anything that reaches the outside world, from Tally, the workspace I built for exactly that.</p>
+
+          <figure class="demo">
+            <video class="demo-video" controls muted loop playsinline preload="none"
+                   poster="assets/tally/dashboard.jpg"
+                   aria-label="Silent tour of Tally: the assistant answering what ran today, the activity log, the automations list, the connector catalogue and a live leads table.">
+              <source src="assets/tally/tally-demo.mp4" type="video/mp4">
+              <track kind="captions" src="assets/tally/tally-demo.en.vtt" srclang="en" label="English" default>
+            </video>
+            <figcaption>Tally, the client workspace. Silent, 42 seconds; the captions carry the commentary.</figcaption>
+          </figure>
+        </div>
+      </li>
+
+      <li>
+        <div class="when">Sep 2024 —<br><span class="when-sub">Dec 2024</span></div>
+        <div class="what">
+          <h3>Graduate Data Analyst</h3>
+          <div class="where">Useful Projects, London, UK</div>
+          <ul class="bullets">
+            <li>Owned the full data lifecycle for carbon analysis, from identifying carbon hotspots to forecasting decarbonisation roadmaps, with visualisation in Power BI and GIS.</li>
+            <li>Produced carbon footprint reporting to RICS and GHG standards, advising clients on decarbonisation strategy across energy, material and operational areas.</li>
+            <li>Worked with engineering, energy and leadership stakeholders to define key metrics and shape the analysis roadmap.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="when">Dec 2023 —<br><span class="when-sub">Jan 2024</span></div>
+        <div class="what">
+          <h3>Data Analyst</h3>
+          <div class="where">Southeast London Community Energy, London, UK</div>
+          <ul class="bullets">
+            <li>Advised the energy-poverty team on service delivery by analysing open data with Python and Excel, contributing to a 10% increase in the service's utilisation rate.</li>
+            <li>Sourced and validated open-source data with Python and Tableau, identifying poverty and poor-energy-performance hotspots visualised with government GIS shapefiles.</li>
+            <li>Presented findings and a refined priority strategy to senior management in report and presentation form.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="when">Feb 2023 —<br><span class="when-sub">May 2023</span></div>
+        <div class="what">
+          <h3>Data Analyst Trainee</h3>
+          <div class="where">Generation, London, UK</div>
+          <ul class="bullets">
+            <li>Built integrated solutions for large, multi-source datasets using Python (web scraping), SQL and Excel for storage and cleaning, and Power BI for visualisation.</li>
+            <li>Mentored team members and produced training materials, simplifying complex concepts and often extending solutions beyond the standard course framework.</li>
+          </ul>
+        </div>
+      </li>
+
+      <li>
+        <div class="when">Nov 2021 —<br><span class="when-sub">Aug 2022</span></div>
+        <div class="what">
+          <h3>Business Analyst (Placement)</h3>
+          <div class="where">Skywise Engineering, Hong Kong</div>
+          <ul class="bullets">
+            <li>Led a digital transformation from physical record-keeping to an engineering project-management system, owning the full lifecycle: requirements, impact assessment, prototyping, development, UAT and integration.</li>
+            <li>Built a Jira-based project management dashboard using agile methodology to track KPIs, deadlines and milestones, contributing to a 5% reduction in project timelines.</li>
+            <li>Ran requirement-gathering with staff and clients through surveys and interviews, and managed change through communication, training and feedback, improving client satisfaction by 10%.</li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ client work ============ -->
+  <section id="clients" class="section">
+    <div class="section-head">
+      <h2>Automation delivered</h2>
+      <p class="lede">DDX engagements, anonymised by sector. The DDX site names no client, and neither does this page.</p>
+    </div>
+    <div class="placeholder">
+      <div class="ph-tag">Placeholder — needs your input</div>
+      <p>Two to four lines go here, each one: <strong>sector — what was automated — what changed</strong>. For example <em>"A UK logistics firm, quote reading, 40 minutes down to 3."</em> Send me the real engagements and this replaces the box.</p>
+    </div>
+  </section>
+
+  <!-- ============ education ============ -->
+  <section class="section">
+    <div class="section-head"><h2>Education</h2></div>
+    <ol class="timeline compact">
+      <li>
+        <div class="when">Oct 2019 —<br><span class="when-sub">Jun 2023</span></div>
+        <div class="what">
+          <h3>BSc Computer Science with Artificial Intelligence</h3>
+          <div class="where">University of Leeds, UK</div>
+        </div>
+      </li>
+      <li>
+        <div class="when">Sep 2018 —<br><span class="when-sub">Jun 2019</span></div>
+        <div class="what">
+          <h3>Foundation Degree in Science</h3>
+          <div class="where">Chase Grammar School, UK</div>
+        </div>
+      </li>
+      <li>
+        <div class="when">Sep 2016 —<br><span class="when-sub">Jun 2018</span></div>
+        <div class="what">
+          <h3>GCSE</h3>
+          <div class="where">Chase Grammar School, UK</div>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ contact ============ -->
+  <section id="contact" class="contact">
+    <div class="contact-in">
+      <div>
+        <h2>Got a process worth automating?</h2>
+        <p>Procurement, supply chain, or anything where the data is scattered and the workflow is still manual. Email is the fastest way to reach me.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn" href="mailto:choimanto62@gmail.com">choimanto62@gmail.com</a>
+        <a class="btn btn-ghost" href="assets/Dixon-Choi-CV.pdf" download>Download CV (PDF)</a>
+      </div>
+    </div>
+    <div class="colophon">
+      <span>Dixon Choi · London, UK</span>
+      <span class="links">
+        <a href="https://www.linkedin.com/in/man-to-choi-87bab522a">LinkedIn</a>
+        <a href="https://github.com/Dixonchoi22">GitHub</a>
+        <a href="https://ddx-consulting.com">ddx-consulting.com</a>
+      </span>
+    </div>
+  </section>
+
+</main>
+
+<script type="module">
+  import { createHills } from './assets/hills.js';
+  import { createBeams } from './assets/beams.js';
+
+  const canvas = document.getElementById('hills');
+  try {
+    createHills(canvas, { speed: 0.45 });
+  } catch (err) {
+    // No WebGL (old device, blocked context, software-render refusal). The
+    // page has a painted gradient underneath, so losing the canvas costs
+    // atmosphere and nothing else.
+    canvas.remove();
+    console.warn('Background disabled:', err);
+  }
+
+  // The hero already says the name in 26px type; repeating it in the bar
+  // directly above is a stutter. The bar's name fades in only once the hero
+  // has scrolled past, which is the point at which it starts being useful.
+  const masthead = document.querySelector('.masthead');
+  const heroName = document.querySelector('.hero-name');
+  new IntersectionObserver(
+    ([e]) => masthead.classList.toggle('scrolled', !e.isIntersecting),
+    { rootMargin: '-70px 0px 0px 0px' }
+  ).observe(heroName);
+
+  const diagram = document.getElementById('diagram');
+  const node = (name) => diagram.querySelector(`[data-node="${name}"]`);
+  const hub = node('hub');
+
+  createBeams(diagram, [
+    { from: node('sap'),   to: hub, curvature: -55 },
+    { from: node('d365'),  to: hub, curvature: -18 },
+    { from: node('sp'),    to: hub, curvature: 18 },
+    { from: node('xl'),    to: hub, curvature: 55 },
+    { from: node('pbi'),   to: hub, curvature: -40, reverse: true },
+    { from: node('appr'),  to: hub, curvature: 0,   reverse: true },
+    { from: node('teams'), to: hub, curvature: 40,  reverse: true },
+  ]);
+</script>
+
+</body>
+</html>

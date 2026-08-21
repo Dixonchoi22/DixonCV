@@ -1,0 +1,79 @@
+WEBVTT
+
+NOTE
+Captions for the silent Tally demo. The recording has no audio, so these
+describe what is on screen rather than transcribing speech. They are the only
+channel the video has: it autoplays muted, which is the one way a browser will
+autoplay at all, so a visitor who does not read these sees pictures and no
+argument.
+
+Times are media time. The player applies a slower rate to the Activity and
+Automations chapters, and the browser scales cue timing with playback rate, so
+these stay in sync and those cues get longer on screen rather than shorter.
+
+Chapter marks, matching the strip under the player:
+  0.0  Start · 2.6 Assistant · 13.8 Activity · 18.3 Automations
+  22.8 Connectors · 28.8 Live data · ends 42.3
+
+1
+00:00:00.200 --> 00:00:02.600
+Tally, recorded on a sample workspace.
+
+2
+00:00:02.600 --> 00:00:06.400
+Ask the assistant a question in plain English.
+
+3
+00:00:06.400 --> 00:00:10.200
+It answers from your workspace's live data,
+not from a report someone prepared earlier.
+
+4
+00:00:10.200 --> 00:00:13.800
+Here: which approvals are waiting,
+and which automation raised each one.
+
+5
+00:00:13.800 --> 00:00:16.000
+The activity log.
+
+6
+00:00:16.000 --> 00:00:18.300
+Every run, with what it did and how it ended.
+
+7
+00:00:18.300 --> 00:00:20.500
+The automations we operate for you.
+
+8
+00:00:20.500 --> 00:00:22.800
+Each one drawn as the steps it takes.
+
+9
+00:00:22.800 --> 00:00:25.800
+Connections to the tools you already use.
+
+10
+00:00:25.800 --> 00:00:28.800
+Outlook, NetSuite, HubSpot, Teams, QuickBooks
+and hundreds more. We wire them up.
+
+11
+00:00:28.800 --> 00:00:32.500
+What the automations produce
+lands in tables your team can open.
+
+12
+00:00:32.500 --> 00:00:36.500
+Filter it, sort it,
+take it to Excel in one click.
+
+13
+00:00:36.500 --> 00:00:40.000
+Nothing leaves without one of your people
+approving it first.
+
+14
+00:00:40.000 --> 00:00:42.300
+Sample company, sample figures.
+The product is real.

@@ -1,0 +1,21 @@
+# Static CV site — nothing is built, so nothing here is generated output.
+
+# Leftovers from the Streamlit version. Kept on disk, kept out of the repo:
+# the repo is public for GitHub Pages, and none of these are referenced by the
+# site any more.
+Screenshot (708).png
+my pic.jpg
+Final year project.pdf
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+
+# Node — only ever present if someone re-vendors three.js
+node_modules/
+package-lock.json
