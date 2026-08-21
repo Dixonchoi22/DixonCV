@@ -473,25 +473,6 @@ h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: pretty; }
   color: var(--faint);
 }
 
-/* ---------- client placeholder ---------- */
-
-.placeholder {
-  padding: 20px 22px;
-  border: 1.5px dashed rgba(224, 138, 92, 0.45);
-  border-radius: 5px;
-  background: rgba(224, 138, 92, 0.05);
-}
-.ph-tag {
-  margin-bottom: 8px;
-  font-family: var(--mono);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--warm);
-}
-.placeholder p { margin: 0; font-size: 14px; color: var(--dim); }
-
 /* ---------- contact ---------- */
 
 .contact {
@@ -571,7 +552,7 @@ h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: pretty; }
   }
 
   #hills, .veil, .beams, .nav, .hero-actions, .contact-actions,
-  .placeholder, .demo, .colophon { display: none !important; }
+  .demo, .colophon { display: none !important; }
 
   .sheet {
     width: auto;

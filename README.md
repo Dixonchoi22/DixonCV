@@ -55,8 +55,8 @@ is named, the seven countries and the agent, MCP and SRM work are all there.
 Individual ERP product names and the stakeholder headcount are not.
 
 **Client work names no one.** The DDX site states that it names no client and
-quotes no real figure, and this page follows it. The dashed placeholder in the
-`#clients` section is waiting for anonymised engagements.
+quotes no real figure. If a client-work section is added later it has to follow
+that: anonymised by sector, e.g. "a UK logistics firm", never a company name.
 
 **The repositories behind the work are private.** Only three of Dixon's GitHub
 repositories are public, which is why nothing here links to source.
