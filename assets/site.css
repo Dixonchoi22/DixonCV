@@ -485,6 +485,24 @@ h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: pretty; }
   border-radius: 8px;
 }
 
+/* A visible link out of a timeline entry. The URL in the `where` line reads as
+   a label rather than something to click, so the entry gets an explicit one. */
+.visit {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink);
+  transition: border-color .15s ease, background .15s ease;
+}
+.visit:hover { border-color: var(--ink); background: rgba(255, 255, 255, 0.05); }
+
 /* ---------- contact ---------- */
 
 .contact {
@@ -563,8 +581,10 @@ h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: pretty; }
     line-height: 1.42;
   }
 
+  /* .visit goes with .demo: on paper the `where` line already carries the URL,
+     so the button would just repeat it. */
   #hills, .veil, .beams, .nav, .hero-actions, .contact-actions,
-  .demo, .colophon { display: none !important; }
+  .demo, .visit, .colophon { display: none !important; }
 
   .sheet {
     width: auto;
