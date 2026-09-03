@@ -51,8 +51,9 @@ Contact is email, LinkedIn and GitHub only. The number is on the CV file Dixon
 sends privately, and it should stay there.
 
 **Gategroup is described one layer shallower than the private CV.** The company
-is named, the seven countries and the agent, MCP and SRM work are all there.
-Individual ERP product names and the stakeholder headcount are not.
+is named; so are the seven countries, the ~80 stakeholders, the ERP products in
+the stack diagram, and the agent, MCP and SRM work. What stays out is anything
+naming a supplier, a contract, a spend figure or an internal system URL.
 
 **Client work names no one.** The DDX site states that it names no client and
 quotes no real figure. If a client-work section is added later it has to follow
