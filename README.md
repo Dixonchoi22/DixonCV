@@ -18,6 +18,7 @@ navigation stripped out.
 | `assets/beams.js` | The connector wires in the stack diagram. SVG plus SMIL, replacing a framer-motion component. |
 | `assets/vendor/` | three.js, vendored. `three.module.min.js` imports `three.core.min.js`, so both must stay. |
 | `assets/tally/` | The Tally demo video, poster and captions, copied from the DDX site. |
+| `assets/chumi/` | Three Chumi screenshots, downscaled to 440px from the Play Store set in the Chumi repo (`screens/store-2026-07*`). Store art, so already public. |
 | `assets/Dixon-Choi-CV.pdf` | Generated, not hand-made. Regenerate with the command below. |
 | `.nojekyll` | Stops GitHub Pages running the files through Jekyll. |
 

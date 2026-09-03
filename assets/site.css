@@ -466,6 +466,22 @@ h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: pretty; }
   color: var(--faint);
 }
 
+/* Three phone screenshots side by side. They stay three across at every width:
+   the shots are portrait and already narrow, so stacking them would make the
+   section taller than the role it illustrates. */
+.shot-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.shot-row img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
 /* ---------- contact ---------- */
 
 .contact {
