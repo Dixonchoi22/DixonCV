@@ -472,7 +472,10 @@ h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: pretty; }
 .shot-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
+  gap: 8px;
+  /* Capped rather than full-bleed: at the sheet's full width three portrait
+     phones become a band taller than the entry they illustrate. */
+  max-width: 420px;
 }
 .shot-row img {
   display: block;
