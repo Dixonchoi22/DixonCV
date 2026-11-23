@@ -3,20 +3,19 @@
 Static site, no build step. Live at **https://dixonchoi22.github.io** once the
 repository is renamed and Pages is switched on.
 
-One frosted A4 sheet over an animated WebGL terrain. The sheet holds the whole
-CV; printing it (or the `Download CV` button, which serves a PDF printed from
-this same page) produces a three-page A4 document with the background and the
-navigation stripped out.
+A light, structured page built around one idea: moving work from email and
+spreadsheets to agents that run it. Sections run Approach, Architecture, DDX
+(Graham and Tally), Experience, Apps, Skills and Contact. Printing it (or the
+`Download CV` button, which serves a PDF printed from this same page) produces
+a three-page A4 document. The print rules hide the approach and architecture
+sections, the demo video and the screenshots.
 
 ## Layout
 
 | Path | What it is |
 |---|---|
 | `index.html` | The whole page. Content lives here, not in a template. |
-| `assets/site.css` | One stylesheet: screen, narrow, and the print rules that turn the page into the CV. |
-| `assets/hills.js` | The terrain. A rewrite of a React/three.js component into a plain module that cancels its own loop, pauses on a hidden tab, and does not run under `prefers-reduced-motion`. |
-| `assets/beams.js` | The connector wires in the stack diagram. SVG plus SMIL, replacing a framer-motion component. |
-| `assets/vendor/` | three.js, vendored. `three.module.min.js` imports `three.core.min.js`, so both must stay. |
+| `assets/site.css` | One stylesheet: screen, narrow, and the print rules that turn the page into the CV. No JavaScript on the page. |
 | `assets/tally/` | The Tally demo video, poster and captions, copied from the DDX site. |
 | `assets/chumi/` | Three Chumi screenshots, downscaled to 440px from the Play Store set in the Chumi repo (`screens/store-2026-07*`). Store art, so already public. |
 | `assets/Dixon-Choi-CV.pdf` | Generated, not hand-made. Regenerate with the command below. |
@@ -24,8 +23,7 @@ navigation stripped out.
 
 ## Running it locally
 
-ES modules need a real origin, so opening `index.html` from the filesystem will
-not load the background:
+The page uses no JavaScript, but a local server matches how Pages serves it:
 
 ```bash
 python -m http.server 8931
