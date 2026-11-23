@@ -825,3 +825,13 @@ h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: pretty; }
   letter-spacing: .16em; text-transform: uppercase; color: var(--faint);
 }
 @media print { .loop, .sub-h { display: none; } .feature-sm h4 { font-size: 16px; } .feature-sm .feature-lede { font-size: 9.5px; } }
+
+/* ---------- v8: apps ---------- */
+.cards.apps { margin: 0; }
+.cards.apps li:last-child:nth-child(odd) { grid-column: auto; }
+.status {
+  margin-bottom: 8px;
+  font-family: var(--mono); font-size: 10.5px; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--warm);
+}
+.cards.apps li:nth-child(even) .status { color: var(--cool); }
