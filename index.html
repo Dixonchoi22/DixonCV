@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <!-- Versioned so a stylesheet change reaches people who already have the old
      one cached; bump the query when the CSS changes shape. -->
-<link rel="stylesheet" href="assets/site.css?v=5">
+<link rel="stylesheet" href="assets/site.css?v=6">
 </head>
 <body>
 
@@ -43,7 +43,7 @@
       </div>
     </div>
     <div class="hero-body">
-      <p>I'm the technical lead of a two-person digital transformation team at Gategroup, covering seven European countries and 80+ colleagues. I find the problem, build the fix and run the rollout myself. The fixes are AI agents, intelligent automation and data work. Outside the day job I run <a href="https://ddx-consulting.com">DDX Consulting</a>, which builds AI agents and automation for clients and then operates them, and I'm building Chumi, an AI pet-health app.</p>
+      <p>I'm the technical lead of a two-person digital transformation team at Gategroup, covering seven European countries and 80+ colleagues. I find the problem, build the fix and run the rollout myself. The fixes are AI agents, intelligent automation and data work. Outside the day job I run <a href="https://ddx-consulting.com">DDX Consulting</a>, which builds AI agents and automation for clients and then operates them, and I'm building Chumi, an AI pet-health app. DDX's main product is Graham, which learns how a client's company really works.</p>
       <div class="hero-actions">
         <a class="btn" href="assets/Dixon-Choi-CV.pdf" download>Download CV</a>
         <a class="btn btn-ghost" href="#contact">Get in touch</a>
@@ -202,18 +202,27 @@
         <div class="what">
           <h3>Founder</h3>
           <div class="where">DDX Consulting · <a href="https://ddx-consulting.com">ddx-consulting.com</a> · alongside Gategroup</div>
-          <p>Process first, technology second. I work out how the work really happens and where the gaps are, then apply AI agents, intelligent automation and integration, and run what we build. Delivered for 50+ clients.</p>
+          <p>Graham is the way in. Process first, technology second: I work out how the work really happens and where the gaps are, then apply AI agents, intelligent automation and integration, and run what we build. Delivered for 50+ clients.</p>
+
+          <article class="feature" id="graham">
+            <div class="feature-tag">DDX's own product · in build</div>
+            <h4>Graham</h4>
+            <p class="feature-lede">Graham is how DDX gets to know a client's company fast: how the work really runs, where it breaks, and where an AI agent would help. It has its own login and its own database, separate from Tally.</p>
+            <ol class="parts">
+              <li><h5>Company Brain</h5><p>Clients upload documents and the AI reads, sorts and files them. Scans and images are on the way. A separate Interview Brain holds every interview. DDX sees all of it. Clients see only the verified results, never which employee said what.</p></li>
+              <li><h5>AI interviews</h5><p>DDX picks the company and the people, and staff get a link with no account to create. The AI works from a brief and asks follow-up questions instead of running a fixed questionnaire. Text today, a voice version later. After each round it sums up the patterns and what's still missing.</p></li>
+              <li><h5>Reports</h5><p>The AI pulls findings, contradictions and gaps from the interviews and documents into a first draft, and every point carries its source. DDX reviews it, then hands it over. The AI never sends anything to a client itself.</p></li>
+              <li><h5>Ask Graham</h5><p>Clients ask questions and get answers from their own Brain, with citations. They can also connect their own Claude or ChatGPT to it over MCP.</p></li>
+            </ol>
+            <p class="feature-foot">Each company's data stays fully separate. Files and database sit in London, AI processing runs in the EU, and DDX operators need 2FA on top of client SSO. Built so far: login, the operator console, document upload, text interviews and EU processing. In progress: Brain search, interview setup and reports.</p>
+          </article>
 
           <ul class="cards">
             <li><h4>Lead automation</h4><p>Agents find possible leads, research each business and its LinkedIn presence, build the PowerPoint, book the meeting and brief the sales manager beforehand.</p></li>
-            <li><h4>Company brain</h4><p>A GenAI agent over a client's own documents, so staff get answers in one place. A second agent interviews staff to capture each process and shows where ways of working differ, for example UK versus Germany.</p></li>
             <li><h4>Voice agent</h4><p>For a plumbing business: an agent that answers incoming calls so enquiries aren't missed while the team is out on jobs.</p></li>
-            <li><h4>Tally</h4><p>DDX's own agent platform across a client's systems and company knowledge. Clients run their own automation from it, with an MCP connection to their own AI platform.</p></li>
+            <li><h4>Tally</h4><p>DDX's automation workspace across a client's systems. Clients watch each run and run their own automation from it. Company knowledge and interviews are moving over to Graham.</p></li>
           </ul>
 
-          <!-- GRAHAM: DDX's main selling point. Add a featured block here once
-               the repo contents or a short description are available. Do not
-               invent claims. -->
 
           <figure class="demo">
             <video class="demo-video" controls muted loop playsinline preload="none"
