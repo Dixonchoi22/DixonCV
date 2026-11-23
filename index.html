@@ -8,237 +8,161 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<!-- Versioned so a stylesheet change reaches people who already have the old
-     one cached; bump the query when the CSS changes shape. -->
-<link rel="stylesheet" href="assets/site.css?v=8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<!-- Versioned so a stylesheet change reaches people who already have the old one cached. -->
+<link rel="stylesheet" href="assets/site.css?v=9">
 </head>
 <body>
 
-<canvas id="hills" aria-hidden="true"></canvas>
-<div class="veil" aria-hidden="true"></div>
-
-<main class="sheet">
-
-  <!-- ============ masthead ============ -->
-  <header class="masthead">
-    <div class="brand">Dixon Choi</div>
-    <nav class="nav">
-      <a href="#stack">Stack</a>
-      <a href="#skills">Skills</a>
-      <a href="#work">Work</a>
+<header class="bar">
+  <div class="wrap bar-in">
+    <a class="brand" href="#top">
+      <img src="assets/dixon.jpg" srcset="assets/dixon.jpg 1x, assets/dixon@2x.jpg 2x" width="32" height="32" alt="">
+      Dixon Choi
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#approach">Approach</a>
+      <a href="#stack">Architecture</a>
+      <a href="#ddx">DDX</a>
+      <a href="#work">Experience</a>
       <a href="#apps">Apps</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>
+  </div>
+</header>
+
+<main id="top">
 
   <!-- ============ hero ============ -->
   <section class="hero">
-    <div class="hero-top">
-      <img class="portrait" src="assets/dixon.jpg"
-           srcset="assets/dixon.jpg 1x, assets/dixon@2x.jpg 2x"
-           width="88" height="88" alt="Dixon Choi">
-      <div>
-        <div class="eyebrow"><span class="tick"></span>Digital transformation · AI agents &amp; automation</div>
-        <h1 class="hero-name">Dixon Choi</h1>
-      </div>
-    </div>
-    <div class="hero-body">
-      <p>I'm the technical lead of a two-person digital transformation team at Gategroup, covering seven European countries and 80+ colleagues. I find the problem, build the fix and run the rollout myself. The fixes are AI agents, intelligent automation and data work. Outside the day job I run <a href="https://ddx-consulting.com">DDX Consulting</a>, which builds AI agents and automation for clients and then operates them, and I'm building Chumi, an AI pet-health app. DDX's main product is Graham, which learns how a client's company really works.</p>
-      <div class="hero-actions">
-        <a class="btn" href="assets/Dixon-Choi-CV.pdf" download>Download CV</a>
-        <a class="btn btn-ghost" href="#contact">Get in touch</a>
-      </div>
-    </div>
-    <ul class="meta">
-      <li>
-        <svg viewBox="0 0 24 24"><path d="M12 21s-7-5.4-7-10.5A7 7 0 0 1 19 10.5C19 15.6 12 21 12 21Z"/><circle cx="12" cy="10.5" r="2.5"/></svg>
-        London, UK
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 6.5 9 6 9-6"/></svg>
-        <a href="mailto:choimanto62@gmail.com">choimanto62@gmail.com</a>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 10.5V17"/><path d="M7.5 7.2v.1"/><path d="M11.5 17v-3.6a2.4 2.4 0 0 1 4.8 0V17"/></svg>
-        <a href="https://www.linkedin.com/in/dixon-choi-87bab522a">LinkedIn</a>
-      </li>
-      <li>
-        <svg viewBox="0 0 24 24"><path d="M9 20.5c-4.2 1.4-4.2-2.4-5.9-2.9m11.8 4.9v-3.8a3.3 3.3 0 0 0-.9-2.6c3-.3 6.1-1.5 6.1-6.6a5.1 5.1 0 0 0-1.4-3.5 4.8 4.8 0 0 0-.1-3.6s-1.1-.3-3.8 1.4a13 13 0 0 0-6.8 0C5.3 2.1 4.2 2.4 4.2 2.4a4.8 4.8 0 0 0-.1 3.6 5.1 5.1 0 0 0-1.4 3.6c0 5 3.1 6.2 6.1 6.5a3.3 3.3 0 0 0-.9 2.6v3.8"/></svg>
-        <a href="https://github.com/Dixonchoi22">GitHub</a>
-      </li>
-    </ul>
-  </section>
-
-  <!-- ============ the stack, as a live diagram ============ -->
-  <section id="stack" class="section">
-    <div class="section-head">
-      <h2>The architecture I run</h2>
-      <p class="lede">Source systems on the left, the automation layer in the middle, the decision on the right. I set what connects to what, and nothing reaches the outside world without a person approving it.</p>
-    </div>
-
-    <div class="diagram" id="diagram">
-      <div class="col col-in">
-        <div class="node" data-node="sap">
-          <span class="ring"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 9.5h18M9 9.5V19"/></svg></span>
-          <span class="node-label">SAP</span>
-        </div>
-        <div class="node" data-node="d365">
-          <span class="ring"><svg class="ico" viewBox="0 0 24 24"><path d="M4 7.2 12 4l8 3.2v9.6L12 20l-8-3.2Z"/><path d="M12 10.4v9.6M4 7.2l8 3.2 8-3.2"/></svg></span>
-          <span class="node-label">Dynamics 365</span>
-        </div>
-        <div class="node" data-node="sp">
-          <span class="ring"><svg class="ico" viewBox="0 0 24 24"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4H13l3 3h2.5A1.5 1.5 0 0 1 20 8.5v9A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5Z"/><path d="M8.5 12.5h7M8.5 15.5h4.5"/></svg></span>
-          <span class="node-label">SharePoint</span>
-        </div>
-        <div class="node" data-node="xl">
-          <span class="ring"><svg class="ico" viewBox="0 0 24 24"><rect x="3.5" y="4.5" width="17" height="15" rx="1.8"/><path d="M3.5 9.5h17M3.5 14.5h17M9.5 4.5v15M15 4.5v15"/></svg></span>
-          <span class="node-label">Excel · Power Query</span>
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="tick"></span>Digital transformation lead · London</div>
+        <h1>From email and spreadsheets to <em>agents that run the work.</em></h1>
+        <p class="hero-lede">I'm the technical lead of a two-person digital transformation team at Gategroup, covering seven European countries and 80+ colleagues. I find the problem, build the fix and run the rollout myself. The fixes are AI agents, intelligent automation and data work.</p>
+        <p class="hero-sub">Outside the day job I run <a href="https://ddx-consulting.com">DDX Consulting</a>, which builds AI agents and automation for clients and then operates them, and I'm building <a href="#apps">Chumi, Reforge and Vireault</a> as Android apps.</p>
+        <div class="hero-actions">
+          <a class="btn" href="assets/Dixon-Choi-CV.pdf" download>Download CV</a>
+          <a class="btn btn-ghost" href="#contact">Get in touch</a>
         </div>
       </div>
 
-      <div class="col col-hub">
-        <div class="hub" data-node="hub">
-          <span class="ring ring-lg"><svg class="ico" viewBox="0 0 24 24"><path d="M12 2.5v19M2.5 12h19M5.2 5.2l13.6 13.6M18.8 5.2 5.2 18.8"/></svg></span>
-          <div class="hub-title">LLM agents &amp; MCP servers</div>
-          <div class="hub-tools">
-            <span>Claude</span><span>Agent SDK</span><span>MCP</span><span>n8n</span><span>Power Automate</span><span>Python</span>
+      <aside class="shift" aria-label="Typical before and after">
+        <div class="shift-head">Typical shift</div>
+        <div class="shift-cols">
+          <div class="from">
+            <h2>From</h2>
+            <ul>
+              <li>Work chased by email</li>
+              <li>One spreadsheet per country</li>
+              <li>Re-keying between systems</li>
+              <li>Answers buried in documents</li>
+            </ul>
+          </div>
+          <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+          <div class="to">
+            <h2>To</h2>
+            <ul>
+              <li>Workflows that run themselves</li>
+              <li>One process, one data model</li>
+              <li>Agents connected over MCP</li>
+              <li>A person signs off the output</li>
+            </ul>
           </div>
         </div>
-      </div>
+      </aside>
+    </div>
 
-      <div class="col col-out">
-        <div class="node" data-node="pbi">
-          <span class="ring ring-cool"><svg class="ico" viewBox="0 0 24 24"><path d="M3.5 20.5V4M3.5 20.5H21"/><rect x="7" y="12.5" width="3.2" height="5.5"/><rect x="12.4" y="9" width="3.2" height="9"/><rect x="17.8" y="5.5" width="3.2" height="12.5"/></svg></span>
-          <span class="node-label">Power BI</span>
+    <div class="wrap">
+      <ul class="meta">
+        <li><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.4-7-10.5A7 7 0 0 1 19 10.5C19 15.6 12 21 12 21Z"/><circle cx="12" cy="10.5" r="2.5"/></svg>London, UK</li>
+        <li><svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 6.5 9 6 9-6"/></svg><a href="mailto:choimanto62@gmail.com">choimanto62@gmail.com</a></li>
+        <li><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 10.5V17"/><path d="M7.5 7.2v.1"/><path d="M11.5 17v-3.6a2.4 2.4 0 0 1 4.8 0V17"/></svg><a href="https://www.linkedin.com/in/dixon-choi-87bab522a">LinkedIn</a></li>
+        <li><svg viewBox="0 0 24 24"><path d="M9 20.5c-4.2 1.4-4.2-2.4-5.9-2.9m11.8 4.9v-3.8a3.3 3.3 0 0 0-.9-2.6c3-.3 6.1-1.5 6.1-6.6a5.1 5.1 0 0 0-1.4-3.5 4.8 4.8 0 0 0-.1-3.6s-1.1-.3-3.8 1.4a13 13 0 0 0-6.8 0C5.3 2.1 4.2 2.4 4.2 2.4a4.8 4.8 0 0 0-.1 3.6 5.1 5.1 0 0 0-1.4 3.6c0 5 3.1 6.2 6.1 6.5a3.3 3.3 0 0 0-.9 2.6v3.8"/></svg><a href="https://github.com/Dixonchoi22">GitHub</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ approach ============ -->
+  <section id="approach" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Approach</div>
+        <h2>Process first, technology second.</h2>
+        <p class="lede">I work out how the work really happens and where the gaps are, then apply AI agents, intelligent automation and integration, and run what we build.</p>
+      </div>
+      <ol class="phases">
+        <li><span class="n">01</span><h3>Discover</h3><p>Interview the people doing the work. Map the real process, where the time goes and where it hurts.</p><span class="tag">Graham</span></li>
+        <li><span class="n">02</span><h3>Design</h3><p>Pick the few places an agent or an automation pays off. Set what it can reach and who signs off.</p><span class="tag">Graham</span></li>
+        <li><span class="n">03</span><h3>Build</h3><p>Build the workflows, data model and agents myself. Requirements, UAT and integration included.</p><span class="tag tag-b">Tally</span></li>
+        <li><span class="n">04</span><h3>Run</h3><p>Roll it out market by market with training. Then operate it, so it keeps working after launch.</p><span class="tag tag-b">Tally</span></li>
+        <li><span class="n">05</span><h3>Measure</h3><p>Go back to the same teams and measure what changed. That finds the next opportunity.</p><span class="tag">Graham</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ architecture ============ -->
+  <section id="stack" class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Architecture</div>
+        <h2>The stack I run.</h2>
+        <p class="lede">Source systems on the left, the automation layer in the middle, the decision on the right. I set what connects to what, and nothing reaches the outside world without a person approving it.</p>
+      </div>
+      <div class="flow">
+        <div class="flow-col">
+          <div class="flow-label">Source systems</div>
+          <div class="chip-card">SAP</div>
+          <div class="chip-card">Dynamics 365</div>
+          <div class="chip-card">SharePoint</div>
+          <div class="chip-card">Excel · Power Query</div>
         </div>
-        <div class="node" data-node="appr">
-          <span class="ring ring-cool"><svg class="ico" viewBox="0 0 24 24"><path d="M20 6.5 9.5 17 4.5 12"/></svg></span>
-          <span class="node-label">Human approval</span>
+        <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+        <div class="flow-col flow-hub">
+          <div class="flow-label">Automation layer</div>
+          <div class="hub">
+            <div class="hub-title">LLM agents &amp; MCP servers</div>
+            <div class="hub-tools"><span>Claude</span><span>Agent SDK</span><span>MCP</span><span>n8n</span><span>Power Automate</span><span>Python</span></div>
+          </div>
         </div>
-        <div class="node" data-node="teams">
-          <span class="ring ring-cool"><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="4.5" width="18" height="13" rx="2.5"/><path d="M8 17.5 7 21l4.5-3.5"/><path d="M8 9h8M8 12.5h5"/></svg></span>
-          <span class="node-label">Teams · Outlook</span>
+        <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
+        <div class="flow-col">
+          <div class="flow-label">Decision</div>
+          <div class="chip-card">Power BI</div>
+          <div class="chip-card chip-ok">Human approval</div>
+          <div class="chip-card">Teams · Outlook</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ============ skills ============ -->
-  <section id="skills" class="section">
-    <div class="section-head">
-      <h2>Tools I ship with</h2>
-    </div>
-
-    <div class="skills">
-      <div class="skill-group">
-        <h3><span class="rule"></span>AI &amp; automation</h3>
-        <ul class="chips">
-          <li>AI agents · LLM agents</li><li>MCP servers</li><li>GenAI solution design</li>
-          <li>Prompt engineering</li><li>Intelligent automation</li>
-          <li>n8n</li><li>Power Automate</li>
-        </ul>
+  <!-- ============ DDX ============ -->
+  <section id="ddx" class="section dark">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">DDX Consulting · <a href="https://ddx-consulting.com">ddx-consulting.com</a></div>
+        <h2>Graham understands the company. Tally does the work.</h2>
+        <p class="lede">DDX is a consultancy that helps clients run their operations better with AI. The work comes in two stages, and each has its own DDX product. DDX sits between them as the consultant. Delivered for 50+ clients.</p>
       </div>
 
-      <div class="skill-group">
-        <h3><span class="rule rule-cool"></span>Data &amp; BI</h3>
-        <ul class="chips">
-          <li>Power BI</li><li>Power Query (M)</li><li>DAX</li><li>SQL</li>
-          <li>Python · pandas</li><li>Tableau</li><li>GIS</li><li>ML forecasting</li>
-        </ul>
-      </div>
-
-      <div class="skill-group">
-        <h3><span class="rule"></span>Procurement &amp; systems</h3>
-        <ul class="chips">
-          <li>SAP</li><li>Dynamics 365</li><li>SharePoint</li><li>Power Platform</li>
-          <li>Source-to-Pay / P2P</li><li>Spend analytics</li>
-          <li>Supplier relationship management</li><li>KPI frameworks</li>
-        </ul>
-      </div>
-
-      <div class="skill-group">
-        <h3><span class="rule rule-cool"></span>Delivery</h3>
-        <ul class="chips">
-          <li>Requirements gathering</li><li>Process design</li><li>UAT</li>
-          <li>Rollout &amp; training</li><li>Change management</li>
-          <li>Stakeholder engagement</li><li>Agile · Jira</li>
-        </ul>
-      </div>
-
-      <div class="skill-group">
-        <h3><span class="rule"></span>Build</h3>
-        <ul class="chips">
-          <li>TypeScript</li><li>Next.js</li><li>React</li>
-          <li>Postgres</li><li>React Native · Expo</li><li>Git</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ experience ============ -->
-  <section id="work" class="section">
-    <div class="section-head row">
-      <h2>Experience</h2>
-    </div>
-
-    <ol class="timeline">
-      <li>
-        <div class="when">Apr 2025 —<br><span class="when-sub">Present</span></div>
-        <div class="what">
-          <h3>PMO Europe Procurement Analyst</h3>
-          <div class="where">Gategroup, London, UK · digital transformation lead</div>
-          <ul class="bullets">
-            <li>Technical lead of a two-person digital transformation team across seven countries and 80+ colleagues. I do all the technical work: I found 15+ business challenges and built the processes, data automation and AI agents that fix them.</li>
-            <li>Own the full product lifecycle of the AI agents the European procurement team uses for contract review, supplier discovery and negotiation support. I design, build and train them. Team efficiency is up 20%.</li>
-            <li>Set the governance around that AI work: what the agents can reach, what they cannot, and a human sign-off before anything leaves the business.</li>
-            <li>Moved supplier communications, invoice and rebate collection and budget submission out of email and spreadsheets into Power Automate. Accuracy and frequency went up, and so did the budget we deliver, by 35%.</li>
-            <li>Built the global Supplier Relationship Management programme from scratch, from process design to the Power Automate, SharePoint and Power BI solution behind it. Supplier scorecards are used by 60+ stakeholders.</li>
-          </ul>
-        </div>
-      </li>
-
-      <li>
-        <div class="when">May 2025 —<br><span class="when-sub">Present</span></div>
-        <div class="what">
-          <h3>Founder</h3>
-          <div class="where">DDX Consulting · <a href="https://ddx-consulting.com">ddx-consulting.com</a> · alongside Gategroup</div>
-          <p>DDX is a consultancy that helps clients run their operations better with AI. The work comes in two stages, and each has its own DDX product. Graham is for understanding the company. Tally is for doing the work. DDX sits between them as the consultant. Process first, technology second. Delivered for 50+ clients.</p>
-
-          <article class="feature" id="graham">
-            <div class="feature-tag">Stage 1 · Understand · in build</div>
-            <h4>Graham</h4>
-            <p class="feature-lede">Graham is how DDX works out how a client's company really runs, where the time goes and where it hurts. It has its own login and its own database, separate from Tally.</p>
-            <ol class="parts">
-              <li><h5>Company Brain</h5><p>Clients upload documents and the AI reads, sorts and files them. Scans and images are on the way. A separate Interview Brain holds every interview. DDX sees all of it. Clients see only the verified results, never which employee said what.</p></li>
-              <li><h5>AI interviews</h5><p>DDX picks the company and the people, and staff get a link with no account to create. The AI works from a brief and asks follow-up questions instead of running a fixed questionnaire. It finds the real process, where the time goes and what hurts. Text today, a voice version later.</p></li>
-              <li><h5>Reports</h5><p>The AI pulls findings, contradictions and gaps from the interviews and documents into a first draft, with every point sourced, and marks where an AI agent would fit. DDX reviews it, then hands it over. The AI never sends anything to a client itself.</p></li>
-              <li><h5>Ask Graham</h5><p>Clients ask questions and get answers from their own Brain, with citations. They can also connect their own Claude or ChatGPT to it over MCP.</p></li>
-            </ol>
-            <p class="feature-foot">Each company's data stays fully separate. Files and database sit in London, AI processing runs in the EU, and DDX operators need 2FA on top of client SSO. Built so far: login, the operator console, document upload, text interviews and EU processing. In progress: Brain search, interview setup and reports.</p>
-          </article>
-
-          <article class="feature feature-sm" id="tally">
-            <div class="feature-tag">Stage 2 · Do · next after Graham</div>
-            <h4>Tally</h4>
-            <p class="feature-lede">Tally is the AI operations platform for automation and agents. From the opportunities Graham finds, it builds a team of agents that do the work for the client: handling processes, replying, tidying data. Clients mostly run it by chatting. Brain and interviews have moved out to Graham, so Tally now does automation only.</p>
-          </article>
-
-          <ol class="loop">
-            <li><b>Understand.</b> DDX interviews the client's staff in Graham and feeds in their documents.</li>
-            <li><b>Report.</b> Graham shows where the problems are and which few places suit an agent best.</li>
-            <li><b>Build.</b> DDX agrees the plan with the client and builds the agents in Tally.</li>
-            <li><b>Run.</b> Tally's agents read Graham's Brain through an integration, so they already know the company's data and processes.</li>
-            <li><b>Measure.</b> More interviews in Graham show what improved and where to go next.</li>
+      <div class="duo">
+        <article class="product" id="graham">
+          <div class="product-tag">Stage 1 · Understand · in build</div>
+          <h3>Graham</h3>
+          <p class="product-lede">Graham is how DDX works out how a client's company really runs, where the time goes and where it hurts. It has its own login and its own database, separate from Tally.</p>
+          <ol class="parts">
+            <li><h4>Company Brain</h4><p>Clients upload documents and the AI reads, sorts and files them. Scans and images are on the way. A separate Interview Brain holds every interview. DDX sees all of it. Clients see only the verified results, never which employee said what.</p></li>
+            <li><h4>AI interviews</h4><p>DDX picks the company and the people, and staff get a link with no account to create. The AI works from a brief and asks follow-up questions instead of running a fixed questionnaire. It finds the real process, where the time goes and what hurts. Text today, a voice version later.</p></li>
+            <li><h4>Reports</h4><p>The AI pulls findings, contradictions and gaps from the interviews and documents into a first draft, with every point sourced, and marks where an AI agent would fit. DDX reviews it, then hands it over. The AI never sends anything to a client itself.</p></li>
+            <li><h4>Ask Graham</h4><p>Clients ask questions and get answers from their own Brain, with citations. They can also connect their own Claude or ChatGPT to it over MCP.</p></li>
           </ol>
+          <p class="product-foot">Each company's data stays fully separate. Files and database sit in London, AI processing runs in the EU, and DDX operators need 2FA on top of client SSO. Built so far: login, the operator console, document upload, text interviews and EU processing. In progress: Brain search, interview setup and reports.</p>
+        </article>
 
-          <h4 class="sub-h">Client work delivered</h4>
-          <ul class="cards">
-            <li><h4>Lead automation</h4><p>Agents find possible leads, research each business and its LinkedIn presence, build the PowerPoint, book the meeting and brief the sales manager beforehand.</p></li>
-            <li><h4>Voice agent</h4><p>For a plumbing business: an agent that answers incoming calls so enquiries aren't missed while the team is out on jobs.</p></li>
-          </ul>
-
-
+        <article class="product product-b" id="tally">
+          <div class="product-tag">Stage 2 · Do · next after Graham</div>
+          <h3>Tally</h3>
+          <p class="product-lede">Tally is the AI operations platform for automation and agents. From the opportunities Graham finds, it builds a team of agents that do the work for the client: handling processes, replying, tidying data. Clients mostly run it by chatting. Brain and interviews have moved out to Graham, so Tally now does automation only.</p>
           <figure class="demo">
             <video class="demo-video" controls muted loop playsinline preload="none"
                    poster="assets/tally/dashboard.jpg"
@@ -248,135 +172,215 @@
             </video>
             <figcaption>Tally, the client workspace for automation. Silent, 42 seconds; the captions carry the commentary.</figcaption>
           </figure>
-        </div>
-      </li>
+        </article>
+      </div>
 
-      <li>
-        <div class="when">Mar 2026 —<br><span class="when-sub">Present</span></div>
-        <div class="what">
-          <h3>Founder</h3>
-          <div class="where">Chumi · <a href="https://chumi.pet">chumi.pet</a> · AI pet-health app, side project</div>
-          <ul class="bullets">
-            <li>Started Chumi to cut preventable pet deaths. Too many owners only notice something is wrong when it's too late.</li>
-            <li>Built an AI triage assistant that helps owners understand what may be wrong with their pet and how urgent it is, early enough to act, and sends them to a vet when needed.</li>
-            <li>Founded it and built it alone as an Android app, with nearby-vet search, pet health history and shareable reports.</li>
-          </ul>
-          <figure class="demo shots">
-            <div class="shot-row">
-              <img src="assets/chumi/chumi-home.jpg" width="440" height="978" loading="lazy"
-                   alt="Chumi home screen: the pet's daily check-in and an Ask Chumi prompt.">
-              <img src="assets/chumi/chumi-chat.jpg" width="440" height="978" loading="lazy"
-                   alt="Chumi's assistant opening on suggested symptoms to describe.">
-              <img src="assets/chumi/chumi-consult.jpg" width="440" height="978" loading="lazy"
-                   alt="A consultation in progress: the assistant asks whether the pet has been seen by a vet, with an urgency stripe on its reply.">
-            </div>
-            <figcaption>Chumi on Android: home, the assistant, and a consultation mid-flow.</figcaption>
-          </figure>
+      <ol class="loop">
+        <li><b>Understand.</b> DDX interviews the client's staff in Graham and feeds in their documents.</li>
+        <li><b>Report.</b> Graham shows where the problems are and which few places suit an agent best.</li>
+        <li><b>Build.</b> DDX agrees the plan with the client and builds the agents in Tally.</li>
+        <li><b>Run.</b> Tally's agents read Graham's Brain through an integration, so they already know the company's data and processes.</li>
+        <li><b>Measure.</b> More interviews in Graham show what improved and where to go next.</li>
+      </ol>
 
-          <a class="visit" href="https://chumi.pet">Visit the site — chumi.pet <span aria-hidden="true">→</span></a>
-        </div>
-      </li>
+      <h3 class="sub-h">Client work delivered</h3>
+      <ul class="cards">
+        <li><h4>Lead automation</h4><p>Agents find possible leads, research each business and its LinkedIn presence, build the PowerPoint, book the meeting and brief the sales manager beforehand.</p></li>
+        <li><h4>Voice agent</h4><p>For a plumbing business: an agent that answers incoming calls so enquiries aren't missed while the team is out on jobs.</p></li>
+      </ul>
+    </div>
+  </section>
 
-      <li>
-        <div class="when">Sep 2024 —<br><span class="when-sub">Dec 2024</span></div>
-        <div class="what">
-          <h3>Graduate Data Analyst</h3>
-          <div class="where">Useful Projects, London, UK</div>
-          <ul class="bullets">
-            <li>Owned the carbon-analysis lifecycle: hotspotting, decarbonisation forecasts, and the Power BI and GIS the client used to act on both. Reporting to RICS and GHG standards.</li>
-            <li>Set the metrics with engineering, energy and leadership, and shaped the analysis roadmap they signed off.</li>
-          </ul>
-        </div>
-      </li>
+  <!-- ============ experience ============ -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Experience</div>
+        <h2>Where I've done it.</h2>
+      </div>
 
-      <li>
-        <div class="when">Dec 2023 —<br><span class="when-sub">Jan 2024</span></div>
-        <div class="what">
-          <h3>Data Analyst</h3>
-          <div class="where">Southeast London Community Energy, London, UK</div>
-          <ul class="bullets">
-            <li>Advised the energy-poverty team on where to put the service. Open data in Python and Excel; utilisation up 10%.</li>
-            <li>Mapped poverty and poor energy-performance hotspots onto government GIS shapefiles (Python, Tableau), then presented a revised priority strategy to senior management.</li>
-          </ul>
-        </div>
-      </li>
+      <ol class="timeline">
+        <li>
+          <div class="when">Apr 2025 —<br><span>Present</span></div>
+          <div class="what">
+            <h3>PMO Europe Procurement Analyst</h3>
+            <div class="where">Gategroup, London, UK · digital transformation lead</div>
+            <ul class="bullets">
+              <li>Technical lead of a two-person digital transformation team across seven countries and 80+ colleagues. I do all the technical work: I found 15+ business challenges and built the processes, data automation and AI agents that fix them.</li>
+              <li>Own the full product lifecycle of the AI agents the European procurement team uses for contract review, supplier discovery and negotiation support. I design, build and train them. Team efficiency is up 20%.</li>
+              <li>Set the governance around that AI work: what the agents can reach, what they cannot, and a human sign-off before anything leaves the business.</li>
+              <li>Moved supplier communications, invoice and rebate collection and budget submission out of email and spreadsheets into Power Automate. Accuracy and frequency went up, and so did the budget we deliver, by 35%.</li>
+              <li>Built the global Supplier Relationship Management programme from scratch, from process design to the Power Automate, SharePoint and Power BI solution behind it. Supplier scorecards are used by 60+ stakeholders.</li>
+            </ul>
+          </div>
+        </li>
 
-      <li>
-        <div class="when">Feb 2023 —<br><span class="when-sub">May 2023</span></div>
-        <div class="what">
-          <h3>Data Analyst Trainee</h3>
-          <div class="where">Generation, London, UK</div>
-          <ul class="bullets">
-            <li>Built multi-source pipelines in Python (web scraping), SQL and Excel with Power BI on top, and wrote the training material the rest of the cohort used.</li>
-          </ul>
-        </div>
-      </li>
+        <li>
+          <div class="when">May 2025 —<br><span>Present</span></div>
+          <div class="what">
+            <h3>Founder</h3>
+            <div class="where">DDX Consulting · <a href="https://ddx-consulting.com">ddx-consulting.com</a> · alongside Gategroup</div>
+            <p>AI agents, intelligent automation and integration for clients, then running what we build. Built Graham and Tally, DDX's own products. <a href="#ddx">Details above.</a></p>
+          </div>
+        </li>
 
-      <li>
-        <div class="when">Nov 2021 —<br><span class="when-sub">Aug 2022</span></div>
-        <div class="what">
-          <h3>Business Analyst (Placement)</h3>
-          <div class="where">Skywise Engineering, Hong Kong</div>
-          <ul class="bullets">
-            <li>Led the move from paper to an engineering project-management system: requirements, impact, prototype, build, UAT and integration.</li>
-            <li>Ran the Jira tracking the team used for KPIs, deadlines and milestones (timelines down 5%), and the change management around it: surveys, training, feedback. Client satisfaction up 10%.</li>
-          </ul>
-        </div>
-      </li>
-    </ol>
+        <li>
+          <div class="when">Mar 2026 —<br><span>Present</span></div>
+          <div class="what">
+            <h3>Founder</h3>
+            <div class="where">Chumi · <a href="https://chumi.pet">chumi.pet</a> · AI pet-health app, side project</div>
+            <ul class="bullets">
+              <li>Started Chumi to cut preventable pet deaths. Too many owners only notice something is wrong when it's too late.</li>
+              <li>Built an AI triage assistant that helps owners understand what may be wrong with their pet and how urgent it is, early enough to act, and sends them to a vet when needed.</li>
+              <li>Founded it and built it alone as an Android app, with nearby-vet search, pet health history and shareable reports.</li>
+            </ul>
+            <figure class="shots">
+              <div class="shot-row">
+                <img src="assets/chumi/chumi-home.jpg" width="440" height="978" loading="lazy" alt="Chumi home screen: the pet's daily check-in and an Ask Chumi prompt.">
+                <img src="assets/chumi/chumi-chat.jpg" width="440" height="978" loading="lazy" alt="Chumi's assistant opening on suggested symptoms to describe.">
+                <img src="assets/chumi/chumi-consult.jpg" width="440" height="978" loading="lazy" alt="A consultation in progress: the assistant asks whether the pet has been seen by a vet, with an urgency stripe on its reply.">
+              </div>
+              <figcaption>Chumi on Android: home, the assistant, and a consultation mid-flow.</figcaption>
+            </figure>
+            <a class="visit" href="https://chumi.pet">Visit the site — chumi.pet <span aria-hidden="true">→</span></a>
+          </div>
+        </li>
+
+        <li>
+          <div class="when">Sep 2024 —<br><span>Dec 2024</span></div>
+          <div class="what">
+            <h3>Graduate Data Analyst</h3>
+            <div class="where">Useful Projects, London, UK</div>
+            <ul class="bullets">
+              <li>Owned the carbon-analysis lifecycle: hotspotting, decarbonisation forecasts, and the Power BI and GIS the client used to act on both. Reporting to RICS and GHG standards.</li>
+              <li>Set the metrics with engineering, energy and leadership, and shaped the analysis roadmap they signed off.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <div class="when">Dec 2023 —<br><span>Jan 2024</span></div>
+          <div class="what">
+            <h3>Data Analyst</h3>
+            <div class="where">Southeast London Community Energy, London, UK</div>
+            <ul class="bullets">
+              <li>Advised the energy-poverty team on where to put the service. Open data in Python and Excel; utilisation up 10%.</li>
+              <li>Mapped poverty and poor energy-performance hotspots onto government GIS shapefiles (Python, Tableau), then presented a revised priority strategy to senior management.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <div class="when">Feb 2023 —<br><span>May 2023</span></div>
+          <div class="what">
+            <h3>Data Analyst Trainee</h3>
+            <div class="where">Generation, London, UK</div>
+            <ul class="bullets">
+              <li>Built multi-source pipelines in Python (web scraping), SQL and Excel with Power BI on top, and wrote the training material the rest of the cohort used.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <div class="when">Nov 2021 —<br><span>Aug 2022</span></div>
+          <div class="what">
+            <h3>Business Analyst (Placement)</h3>
+            <div class="where">Skywise Engineering, Hong Kong</div>
+            <ul class="bullets">
+              <li>Led the move from paper to an engineering project-management system: requirements, impact, prototype, build, UAT and integration.</li>
+              <li>Ran the Jira tracking the team used for KPIs, deadlines and milestones (timelines down 5%), and the change management around it: surveys, training, feedback. Client satisfaction up 10%.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+    </div>
   </section>
 
   <!-- ============ apps ============ -->
-  <section id="apps" class="section">
-    <div class="section-head">
-      <h2>More apps I've built</h2>
-      <p class="lede">Two Android apps I build on my own, alongside Chumi. Neither is on Google Play yet.</p>
+  <section id="apps" class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Apps</div>
+        <h2>More apps I've built.</h2>
+        <p class="lede">Android apps I build on my own, alongside Chumi. Reforge and Vireault are not on Google Play yet.</p>
+      </div>
+      <ul class="cards apps">
+        <li>
+          <div class="status">Pre-launch testing</div>
+          <h4>Reforge</h4>
+          <p>A daily discipline app. It tracks food with a photo calorie scan, plus training and weight, and has a focus mode that blocks distracting apps, a place for promises and goals, and an AI coach. React Native and Expo on the front, Supabase and Gemini behind it. AI use is capped per user on the server, so costs stay predictable.</p>
+        </li>
+        <li>
+          <div class="status status-b">Heading into Play testing</div>
+          <h4>Vireault</h4>
+          <p>An encrypted vault for photos, videos, files and notes that lives entirely on the phone, with no account and no servers. Files use AES-256-GCM, keys come from Argon2id, and even file names are encrypted. Native Kotlin and Jetpack Compose. I also built its marketing site in Astro.</p>
+        </li>
+      </ul>
     </div>
-    <ul class="cards apps">
-      <li>
-        <div class="status">Pre-launch testing</div>
-        <h4>Reforge</h4>
-        <p>A daily discipline app. It tracks food with a photo calorie scan, plus training and weight, and has a focus mode that blocks distracting apps, a place for promises and goals, and an AI coach. React Native and Expo on the front, Supabase and Gemini behind it. AI use is capped per user on the server, so costs stay predictable.</p>
-      </li>
-      <li>
-        <div class="status">Heading into Play testing</div>
-        <h4>Vireault</h4>
-        <p>An encrypted vault for photos, videos, files and notes that lives entirely on the phone, with no account and no servers. Files use AES-256-GCM, keys come from Argon2id, and even file names are encrypted. Native Kotlin and Jetpack Compose. I also built its marketing site in Astro.</p>
-      </li>
-    </ul>
+  </section>
+
+  <!-- ============ skills ============ -->
+  <section id="skills" class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">Skills</div>
+        <h2>Tools I ship with.</h2>
+      </div>
+      <div class="skills">
+        <div class="skill-group">
+          <h3><span class="rule"></span>AI &amp; automation</h3>
+          <ul class="chips"><li>AI agents · LLM agents</li><li>MCP servers</li><li>GenAI solution design</li><li>Prompt engineering</li><li>Intelligent automation</li><li>n8n</li><li>Power Automate</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3><span class="rule rule-b"></span>Data &amp; BI</h3>
+          <ul class="chips"><li>Power BI</li><li>Power Query (M)</li><li>DAX</li><li>SQL</li><li>Python · pandas</li><li>Tableau</li><li>GIS</li><li>ML forecasting</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3><span class="rule"></span>Procurement &amp; systems</h3>
+          <ul class="chips"><li>SAP</li><li>Dynamics 365</li><li>SharePoint</li><li>Power Platform</li><li>Source-to-Pay / P2P</li><li>Spend analytics</li><li>Supplier relationship management</li><li>KPI frameworks</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3><span class="rule rule-b"></span>Delivery</h3>
+          <ul class="chips"><li>Requirements gathering</li><li>Process design</li><li>UAT</li><li>Rollout &amp; training</li><li>Change management</li><li>Stakeholder engagement</li><li>Agile · Jira</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3><span class="rule"></span>Build</h3>
+          <ul class="chips"><li>TypeScript</li><li>Next.js</li><li>React</li><li>Postgres</li><li>React Native · Expo</li><li>Kotlin</li><li>Git</li></ul>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- ============ education ============ -->
-  <section class="section">
-    <div class="section-head"><h2>Education</h2></div>
-    <ol class="timeline compact">
-      <li>
-        <div class="when">Oct 2019 —<br><span class="when-sub">Jun 2023</span></div>
-        <div class="what">
-          <h3>BSc Computer Science with Artificial Intelligence</h3>
-          <div class="where">University of Leeds, UK</div>
-        </div>
-      </li>
-      <li>
-        <div class="when">Sep 2018 —<br><span class="when-sub">Jun 2019</span></div>
-        <div class="what">
-          <h3>Foundation Degree in Science; GCSEs</h3>
-          <div class="where">Chase Grammar School, UK</div>
-        </div>
-      </li>
-    </ol>
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head"><div class="kicker">Education</div></div>
+      <ol class="timeline compact">
+        <li>
+          <div class="when">Oct 2019 —<br><span>Jun 2023</span></div>
+          <div class="what"><h3>BSc Computer Science with Artificial Intelligence</h3><div class="where">University of Leeds, UK</div></div>
+        </li>
+        <li>
+          <div class="when">Sep 2018 —<br><span>Jun 2019</span></div>
+          <div class="what"><h3>Foundation Degree in Science; GCSEs</h3><div class="where">Chase Grammar School, UK</div></div>
+        </li>
+      </ol>
+    </div>
   </section>
 
-  <!-- ============ contact ============ -->
-  <section id="contact" class="contact">
+</main>
+
+<!-- ============ contact ============ -->
+<footer id="contact" class="contact">
+  <div class="wrap">
     <div class="contact-in">
       <div>
         <h2>Got a process that still runs on email and spreadsheets?</h2>
         <p>I work out how it really runs, build the fix and keep it running. Email is the fastest way to reach me.</p>
       </div>
       <div class="contact-actions">
-        <a class="btn" href="mailto:choimanto62@gmail.com">choimanto62@gmail.com</a>
-        <a class="btn btn-ghost" href="assets/Dixon-Choi-CV.pdf" download>Download CV (PDF)</a>
+        <a class="btn btn-light" href="mailto:choimanto62@gmail.com">choimanto62@gmail.com</a>
+        <a class="btn btn-outline" href="assets/Dixon-Choi-CV.pdf" download>Download CV (PDF)</a>
       </div>
     </div>
     <div class="colophon">
@@ -387,49 +391,8 @@
         <a href="https://ddx-consulting.com">ddx-consulting.com</a>
       </span>
     </div>
-  </section>
-
-</main>
-
-<script type="module">
-  import { createHills } from './assets/hills.js';
-  import { createBeams } from './assets/beams.js';
-
-  const canvas = document.getElementById('hills');
-  try {
-    createHills(canvas, { speed: 0.45 });
-  } catch (err) {
-    // No WebGL (old device, blocked context, software-render refusal). The
-    // page has a painted gradient underneath, so losing the canvas costs
-    // atmosphere and nothing else.
-    canvas.remove();
-    console.warn('Background disabled:', err);
-  }
-
-  // The hero already says the name in 26px type; repeating it in the bar
-  // directly above is a stutter. The bar's name fades in only once the hero
-  // has scrolled past, which is the point at which it starts being useful.
-  const masthead = document.querySelector('.masthead');
-  const heroName = document.querySelector('.hero-name');
-  new IntersectionObserver(
-    ([e]) => masthead.classList.toggle('scrolled', !e.isIntersecting),
-    { rootMargin: '-70px 0px 0px 0px' }
-  ).observe(heroName);
-
-  const diagram = document.getElementById('diagram');
-  const node = (name) => diagram.querySelector(`[data-node="${name}"]`);
-  const hub = node('hub');
-
-  createBeams(diagram, [
-    { from: node('sap'),   to: hub, curvature: -55 },
-    { from: node('d365'),  to: hub, curvature: -18 },
-    { from: node('sp'),    to: hub, curvature: 18 },
-    { from: node('xl'),    to: hub, curvature: 55 },
-    { from: node('pbi'),   to: hub, curvature: -40, reverse: true },
-    { from: node('appr'),  to: hub, curvature: 0,   reverse: true },
-    { from: node('teams'), to: hub, curvature: 40,  reverse: true },
-  ]);
-</script>
+  </div>
+</footer>
 
 </body>
 </html>
