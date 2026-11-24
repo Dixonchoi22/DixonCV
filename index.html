@@ -10,19 +10,17 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <!-- Versioned so a stylesheet change reaches people who already have the old one cached. -->
-<link rel="stylesheet" href="assets/site.css?v=18">
+<link rel="stylesheet" href="assets/site.css?v=23">
 </head>
 <body>
 
 <header class="bar">
   <div class="wrap bar-in">
     <a class="brand" href="#top">
-      <img src="assets/dixon.jpg" srcset="assets/dixon.jpg 1x, assets/dixon@2x.jpg 2x" width="32" height="32" alt="">
       Dixon Choi
     </a>
     <nav class="nav" aria-label="Sections">
       <a href="#approach">Approach</a>
-      <a href="#stack">How it works</a>
       <a href="#ddx">DDX</a>
       <a href="#work">Experience</a>
       <a href="#apps">Apps</a>
@@ -44,7 +42,7 @@
             <h1>Digital <em>transformation</em></h1>
           </div>
         </div>
-        <p class="hero-lede">I'm the technical lead of a two-person digital transformation team at Gategroup, covering seven European countries and 80+ colleagues. I find the problem, build the fix and run the rollout myself. The fixes are AI agents, intelligent automation and data work.</p>
+        <p class="hero-lede">I fix manual, scattered processes. I work out how the work really happens, then build the AI agents, automation and data reporting that replace it. One person covers requirements, build, UAT and rollout, so nothing gets lost in a handover.</p>
         <p class="hero-sub">I also run <a href="https://ddx-consulting.com">DDX Consulting</a>, which builds AI agents and automation for clients and then operates them, and I build <a href="#apps">Android apps</a> as a solo developer.</p>
         <div class="hero-actions">
           <a class="btn" href="assets/Dixon-Choi-CV.pdf" download>Download CV</a>
@@ -76,14 +74,22 @@
 
   <!-- ============ education ============ -->
   <section class="edu" aria-label="Education">
-    <div class="wrap edu-in">
-      <div class="edu-main">
-        <div class="kicker">Education</div>
-        <h2>BSc Computer Science with Artificial Intelligence</h2>
-        <p class="edu-where">University of Leeds, UK · Oct 2019 — Jun 2023</p>
+    <div class="wrap">
+      <div class="kicker">Education</div>
+      <div class="edu-row">
+        <div>
+          <h2>BSc Computer Science with Artificial Intelligence</h2>
+          <p class="edu-where">University of Leeds, UK</p>
+        </div>
+        <p class="edu-years">Oct 2019 — Jun 2023</p>
       </div>
-      <p class="edu-fit">A computer science and AI degree, applied to digital transformation: I understand the business process and I build the technology that changes it.</p>
-      <p class="edu-also">Before that: Foundation Degree in Science and GCSEs, Chase Grammar School, UK · Sep 2018 — Jun 2019</p>
+      <div class="edu-row edu-row-2">
+        <div>
+          <h2>Foundation Degree in Science; GCSEs</h2>
+          <p class="edu-where">Chase Grammar School, UK</p>
+        </div>
+        <p class="edu-years">Sep 2018 — Jun 2019</p>
+      </div>
     </div>
   </section>
 
@@ -101,72 +107,6 @@
         <li><span class="n">04</span><h3>Run</h3><p>Roll it out market by market with training. Then operate it, so it keeps working after launch.</p><span class="tag tag-b">Tally</span></li>
         <li><span class="n">05</span><h3>Measure</h3><p>Go back to the same teams and measure what changed. That finds the next opportunity.</p><span class="tag">Graham</span></li>
       </ol>
-    </div>
-  </section>
-
-  <!-- ============ architecture ============ -->
-  <section id="stack" class="section section-alt">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="kicker">How it works</div>
-        <h2>RAG answers. Agents act.</h2>
-        <p class="lede">The two get mixed up a lot. RAG lets an AI answer from a company's own documents. An agent goes further: it decides what to do next, uses tools, and stops for a person before anything goes out. I build both, and my agents use RAG as one of their tools.</p>
-      </div>
-
-      <div class="how">
-        <article class="how-card">
-          <div class="how-tag">RAG · retrieval-augmented generation</div>
-          <h3>Answer from your own documents, with the source</h3>
-          <p class="how-q"><span>Question</span>What's the notice period in our packaging supplier's contract?</p>
-
-          <div class="lane">
-            <div class="lane-label">Prepared once</div>
-            <ol class="pipe">
-              <li style="--i:0"><b>Documents</b><span>Contracts, policies, SOPs</span></li>
-              <li style="--i:1"><b>Split</b><span>Cut into short passages</span></li>
-              <li style="--i:2"><b>Embed</b><span>Turn each passage into numbers that capture its meaning</span></li>
-              <li style="--i:3"><b>Index</b><span>Store them so they can be searched by meaning</span></li>
-            </ol>
-          </div>
-          <div class="lane">
-            <div class="lane-label">Every question</div>
-            <ol class="pipe">
-              <li style="--i:4"><b>Question</b><span>Turned into numbers the same way</span></li>
-              <li style="--i:5"><b>Retrieve</b><span>Find the few passages closest in meaning</span></li>
-              <li style="--i:6"><b>Generate</b><span>The model reads only those passages and writes the answer</span></li>
-              <li style="--i:7" class="is-out"><b>Answer</b><span>"90 days' written notice" · Contract §14.2</span></li>
-            </ol>
-          </div>
-          <p class="how-note">The model answers from your text, not from memory, so a person can check the source.</p>
-        </article>
-
-        <article class="how-card how-card-agent">
-          <div class="how-tag how-tag-b">AI agent</div>
-          <h3>Pursue a goal: plan, use tools, check, hand over</h3>
-          <p class="how-q"><span>Goal</span>Find alternatives for a packaging supplier we want to replace.</p>
-
-          <ol class="trace">
-            <li style="--j:0"><i>1</i><div><b>Plan</b><span>I need current spend, then candidate suppliers, then their contract terms.</span></div></li>
-            <li style="--j:1"><i>2</i><div><b>Tool · spend data</b><span>Pulls the last 12 months for the category from the ERP.</span></div></li>
-            <li style="--j:2"><i>3</i><div><b>Tool · supplier search</b><span>Returns candidates that meet the criteria.</span></div></li>
-            <li style="--j:3"><i>4</i><div><b>Tool · RAG</b><span>Reads each candidate's terms from the document library.</span></div></li>
-            <li style="--j:4"><i>5</i><div><b>Draft</b><span>Writes a comparison, every line with its source.</span></div></li>
-            <li style="--j:5" class="is-gate"><i>✓</i><div><b>Human approval</b><span>A person reviews it. Nothing leaves without a yes.</span></div></li>
-          </ol>
-          <div class="loop-note"><span>Think</span><em>→</em><span>Act</span><em>→</em><span>Observe</span><em>↺</em> repeat until the goal is met</div>
-        </article>
-      </div>
-
-      <p class="how-foot">Illustrative example, based on the contract review and supplier discovery agents I build for procurement.</p>
-
-      <div class="wired" aria-label="What the agents connect to">
-        <span class="wired-label">Connected to</span>
-        <span class="wired-group">SAP</span><span class="wired-group">Dynamics 365</span><span class="wired-group">SharePoint</span><span class="wired-group">Excel · Power Query</span>
-        <em aria-hidden="true">→</em>
-        <span class="wired-group wired-core">Claude · MCP · n8n · Power Automate · Python</span>
-        <em aria-hidden="true">→</em>
-        <span class="wired-group">Power BI</span><span class="wired-group">Teams · Outlook</span>
-      </div>
     </div>
   </section>
 
