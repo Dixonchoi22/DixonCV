@@ -272,7 +272,14 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .dot-e { background: var(--ink); }
 
 .meta { margin-top: 24px; }
-@media print { .skillset { display: none; } }
+@media print {
+  .skillset { box-shadow: none; border-radius: 4px; margin-top: 8px; break-inside: avoid; }
+  .skillset-head { padding: 4px 10px; }
+  .skillset dl { display: grid; grid-template-columns: 1fr 1fr; }
+  .skillset dl > div { padding: 5px 10px; }
+  .skillset dt { font-size: 9.5pt; margin-bottom: 1px; }
+  .skillset dd { font-size: 8.4pt; line-height: 1.35; }
+}
 
 /* ---------- v14: how RAG and agents work ---------- */
 .how { display: grid; grid-template-columns: 1.15fr 1fr; gap: 20px; align-items: stretch; }
@@ -335,3 +342,24 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .apps li p { margin-bottom: 16px; }
 @media (max-width: 900px) { .app-feature { grid-template-columns: 1fr; gap: 22px; padding: 22px 18px; } .app-feature .shot-row { margin-left: 0; } }
 @media print { .app-feature { grid-template-columns: 1fr; padding: 8px 10px; break-inside: avoid; margin-bottom: 8px; } .app-feature h3 { font-size: 15pt; } .app-sub { margin-bottom: 4px; } .apps .visit { display: none; } }
+@media print { .contact { display: none; } }
+
+/* ---------- v17: education up top ---------- */
+.edu { padding: 34px 0; background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.edu-in { display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px 48px; align-items: center; }
+.edu-main .kicker { margin-bottom: 8px; }
+.edu h2 { font-size: clamp(22px, 3vw, 30px); font-weight: 800; letter-spacing: -0.03em; line-height: 1.1; }
+.edu-where { margin: 6px 0 0; font-size: 13.5px; color: var(--faint); }
+.edu-fit { margin: 0; font-size: 15px; color: var(--ink); }
+.edu-also { grid-column: 1 / -1; margin: 0; padding-top: 12px; border-top: 1px solid var(--line-soft); font-size: 12.5px; color: var(--faint); }
+@media (max-width: 800px) { .edu-in { grid-template-columns: 1fr; gap: 14px; } }
+@media print { .edu { padding: 8px 0; background: #fff !important; border: 0; border-top: 1px solid var(--line); } .edu h2 { font-size: 12pt; } .edu-fit { font-size: 9.2pt; } .edu-also { font-size: 8.4pt; padding-top: 4px; } .edu-where { font-size: 9pt; } }
+
+/* ---------- v18: larger portrait ---------- */
+.hero-id { display: flex; align-items: center; gap: 28px; }
+.hero-id .eyebrow { margin-bottom: 14px; }
+.portrait { width: 168px; height: 168px; flex: 0 0 auto; border-radius: 50%; object-fit: cover; border: 1px solid var(--line); box-shadow: 0 18px 40px -18px rgba(15, 20, 25, .45); }
+.hero-id h1 { font-size: clamp(34px, 4.6vw, 52px); }
+@media (max-width: 920px) { .hero-id { gap: 20px; } .portrait { width: 132px; height: 132px; } }
+@media (max-width: 560px) { .hero-id { flex-direction: column; align-items: flex-start; gap: 18px; } .portrait { width: 120px; height: 120px; } }
+@media print { .hero-id { gap: 12px; } .portrait { width: 70px; height: 70px; box-shadow: none; } .hero-id h1 { font-size: 22pt; } }

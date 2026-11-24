@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <!-- Versioned so a stylesheet change reaches people who already have the old one cached. -->
-<link rel="stylesheet" href="assets/site.css?v=15">
+<link rel="stylesheet" href="assets/site.css?v=18">
 </head>
 <body>
 
@@ -37,8 +37,13 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="tick"></span>Digital transformation lead · London</div>
-        <h1>Digital <em>transformation</em></h1>
+        <div class="hero-id">
+          <img class="portrait" src="assets/dixon.jpg" srcset="assets/dixon.jpg 1x, assets/dixon@2x.jpg 2x" width="168" height="168" alt="Dixon Choi">
+          <div>
+            <div class="eyebrow"><span class="tick"></span>Digital transformation lead · London</div>
+            <h1>Digital <em>transformation</em></h1>
+          </div>
+        </div>
         <p class="hero-lede">I'm the technical lead of a two-person digital transformation team at Gategroup, covering seven European countries and 80+ colleagues. I find the problem, build the fix and run the rollout myself. The fixes are AI agents, intelligent automation and data work.</p>
         <p class="hero-sub">I also run <a href="https://ddx-consulting.com">DDX Consulting</a>, which builds AI agents and automation for clients and then operates them, and I build <a href="#apps">Android apps</a> as a solo developer.</p>
         <div class="hero-actions">
@@ -51,10 +56,10 @@
         <div class="skillset-head">Skill set</div>
         <dl>
           <div><dt><span class="dot"></span>AI agents &amp; automation</dt><dd>LLM agents · MCP servers · GenAI solution design · Intelligent automation · Prompt engineering · n8n · Power Automate</dd></div>
-          <div><dt><span class="dot dot-b"></span>Data &amp; BI</dt><dd>Power BI · Power Query · DAX · SQL · Python (pandas) · Tableau</dd></div>
-          <div><dt><span class="dot dot-c"></span>Business systems</dt><dd>SAP · Dynamics 365 · SharePoint · Power Platform</dd></div>
-          <div><dt><span class="dot dot-d"></span>Delivery</dt><dd>Process design · Requirements · UAT · Rollout &amp; training · Change management</dd></div>
-          <div><dt><span class="dot dot-e"></span>Build</dt><dd>TypeScript · React Native · Kotlin · Postgres</dd></div>
+          <div><dt><span class="dot dot-b"></span>Data &amp; BI</dt><dd>Power BI · Power Query (M) · DAX · SQL · Python (pandas) · Tableau · GIS · ML forecasting</dd></div>
+          <div><dt><span class="dot dot-c"></span>Procurement &amp; systems</dt><dd>SAP · Dynamics 365 · SharePoint · Power Platform · Source-to-Pay · Spend analytics · Supplier relationship management</dd></div>
+          <div><dt><span class="dot dot-d"></span>Delivery</dt><dd>Process design · Requirements · UAT · Rollout &amp; training · Change management · Agile · Jira</dd></div>
+          <div><dt><span class="dot dot-e"></span>Build</dt><dd>TypeScript · Next.js · React · React Native · Kotlin · Postgres · Git</dd></div>
         </dl>
       </aside>
     </div>
@@ -66,6 +71,19 @@
         <li><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7.5 10.5V17"/><path d="M7.5 7.2v.1"/><path d="M11.5 17v-3.6a2.4 2.4 0 0 1 4.8 0V17"/></svg><a href="https://www.linkedin.com/in/dixon-choi-87bab522a">LinkedIn</a></li>
         <li><svg viewBox="0 0 24 24"><path d="M9 20.5c-4.2 1.4-4.2-2.4-5.9-2.9m11.8 4.9v-3.8a3.3 3.3 0 0 0-.9-2.6c3-.3 6.1-1.5 6.1-6.6a5.1 5.1 0 0 0-1.4-3.5 4.8 4.8 0 0 0-.1-3.6s-1.1-.3-3.8 1.4a13 13 0 0 0-6.8 0C5.3 2.1 4.2 2.4 4.2 2.4a4.8 4.8 0 0 0-.1 3.6 5.1 5.1 0 0 0-1.4 3.6c0 5 3.1 6.2 6.1 6.5a3.3 3.3 0 0 0-.9 2.6v3.8"/></svg><a href="https://github.com/Dixonchoi22">GitHub</a></li>
       </ul>
+    </div>
+  </section>
+
+  <!-- ============ education ============ -->
+  <section class="edu" aria-label="Education">
+    <div class="wrap edu-in">
+      <div class="edu-main">
+        <div class="kicker">Education</div>
+        <h2>BSc Computer Science with Artificial Intelligence</h2>
+        <p class="edu-where">University of Leeds, UK · Oct 2019 — Jun 2023</p>
+      </div>
+      <p class="edu-fit">A computer science and AI degree, applied to digital transformation: I understand the business process and I build the technology that changes it.</p>
+      <p class="edu-also">Before that: Foundation Degree in Science and GCSEs, Chase Grammar School, UK · Sep 2018 — Jun 2019</p>
     </div>
   </section>
 
@@ -338,54 +356,6 @@
     </div>
   </section>
 
-  <!-- ============ skills ============ -->
-  <section id="skills" class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="kicker">Skills</div>
-        <h2>Tools I ship with.</h2>
-      </div>
-      <div class="skills">
-        <div class="skill-group">
-          <h3><span class="rule"></span>AI &amp; automation</h3>
-          <ul class="chips"><li>AI agents · LLM agents</li><li>MCP servers</li><li>GenAI solution design</li><li>Prompt engineering</li><li>Intelligent automation</li><li>n8n</li><li>Power Automate</li></ul>
-        </div>
-        <div class="skill-group">
-          <h3><span class="rule rule-b"></span>Data &amp; BI</h3>
-          <ul class="chips"><li>Power BI</li><li>Power Query (M)</li><li>DAX</li><li>SQL</li><li>Python · pandas</li><li>Tableau</li><li>GIS</li><li>ML forecasting</li></ul>
-        </div>
-        <div class="skill-group">
-          <h3><span class="rule"></span>Procurement &amp; systems</h3>
-          <ul class="chips"><li>SAP</li><li>Dynamics 365</li><li>SharePoint</li><li>Power Platform</li><li>Source-to-Pay / P2P</li><li>Spend analytics</li><li>Supplier relationship management</li><li>KPI frameworks</li></ul>
-        </div>
-        <div class="skill-group">
-          <h3><span class="rule rule-b"></span>Delivery</h3>
-          <ul class="chips"><li>Requirements gathering</li><li>Process design</li><li>UAT</li><li>Rollout &amp; training</li><li>Change management</li><li>Stakeholder engagement</li><li>Agile · Jira</li></ul>
-        </div>
-        <div class="skill-group">
-          <h3><span class="rule"></span>Build</h3>
-          <ul class="chips"><li>TypeScript</li><li>Next.js</li><li>React</li><li>Postgres</li><li>React Native · Expo</li><li>Kotlin</li><li>Git</li></ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ education ============ -->
-  <section class="section section-alt">
-    <div class="wrap">
-      <div class="section-head"><div class="kicker">Education</div></div>
-      <ol class="timeline compact">
-        <li>
-          <div class="when">Oct 2019 —<br><span>Jun 2023</span></div>
-          <div class="what"><h3>BSc Computer Science with Artificial Intelligence</h3><div class="where">University of Leeds, UK</div></div>
-        </li>
-        <li>
-          <div class="when">Sep 2018 —<br><span>Jun 2019</span></div>
-          <div class="what"><h3>Foundation Degree in Science; GCSEs</h3><div class="where">Chase Grammar School, UK</div></div>
-        </li>
-      </ol>
-    </div>
-  </section>
 
 </main>
 
