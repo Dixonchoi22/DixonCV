@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <!-- Versioned so a stylesheet change reaches people who already have the old one cached. -->
-<link rel="stylesheet" href="assets/site.css?v=23">
+<link rel="stylesheet" href="assets/site.css?v=30">
 </head>
 <body>
 
@@ -111,60 +111,6 @@
   </section>
 
   <!-- ============ DDX ============ -->
-  <section id="ddx" class="section dark">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="kicker">DDX Consulting · <a href="https://ddx-consulting.com">ddx-consulting.com</a></div>
-        <h2>Graham understands the company. Tally does the work.</h2>
-        <p class="lede">DDX is a consultancy that helps clients run their operations better with AI. The work comes in two stages, and each has its own DDX product. DDX sits between them as the consultant. Delivered for 50+ clients.</p>
-      </div>
-
-      <div class="duo">
-        <article class="product" id="graham">
-          <div class="product-tag">Stage 1 · Understand · in build</div>
-          <h3>Graham</h3>
-          <p class="product-lede">Graham is how DDX works out how a client's company really runs, where the time goes and where it hurts. It has its own login and its own database, separate from Tally.</p>
-          <ol class="parts">
-            <li><h4>Company Brain</h4><p>Clients upload documents and the AI reads, sorts and files them. Scans and images are on the way. A separate Interview Brain holds every interview. DDX sees all of it. Clients see only the verified results, never which employee said what.</p></li>
-            <li><h4>AI interviews</h4><p>DDX picks the company and the people, and staff get a link with no account to create. The AI works from a brief and asks follow-up questions instead of running a fixed questionnaire. It finds the real process, where the time goes and what hurts. Text today, a voice version later.</p></li>
-            <li><h4>Reports</h4><p>The AI pulls findings, contradictions and gaps from the interviews and documents into a first draft, with every point sourced, and marks where an AI agent would fit. DDX reviews it, then hands it over. The AI never sends anything to a client itself.</p></li>
-            <li><h4>Ask Graham</h4><p>Clients ask questions and get answers from their own Brain, with citations. They can also connect their own Claude or ChatGPT to it over MCP.</p></li>
-          </ol>
-          <p class="product-foot">Each company's data stays fully separate. Files and database sit in London, AI processing runs in the EU, and DDX operators need 2FA on top of client SSO. Built so far: login, the operator console, document upload, text interviews and EU processing. In progress: Brain search, interview setup and reports.</p>
-        </article>
-
-        <article class="product product-b" id="tally">
-          <div class="product-tag">Stage 2 · Do · next after Graham</div>
-          <h3>Tally</h3>
-          <p class="product-lede">Tally is the AI operations platform for automation and agents. From the opportunities Graham finds, it builds a team of agents that do the work for the client: handling processes, replying, tidying data. Clients mostly run it by chatting. Brain and interviews have moved out to Graham, so Tally now does automation only.</p>
-          <figure class="demo">
-            <video class="demo-video" controls muted loop playsinline preload="none"
-                   poster="assets/tally/dashboard.jpg"
-                   aria-label="Silent tour of Tally: the assistant answering what ran today, the activity log, the automations list, the connector catalogue and a live leads table.">
-              <source src="assets/tally/tally-demo.mp4" type="video/mp4">
-              <track kind="captions" src="assets/tally/tally-demo.en.vtt" srclang="en" label="English" default>
-            </video>
-            <figcaption>Tally, the client workspace for automation. Silent, 42 seconds; the captions carry the commentary.</figcaption>
-          </figure>
-        </article>
-      </div>
-
-      <ol class="loop">
-        <li><b>Understand.</b> DDX interviews the client's staff in Graham and feeds in their documents.</li>
-        <li><b>Report.</b> Graham shows where the problems are and which few places suit an agent best.</li>
-        <li><b>Build.</b> DDX agrees the plan with the client and builds the agents in Tally.</li>
-        <li><b>Run.</b> Tally's agents read Graham's Brain through an integration, so they already know the company's data and processes.</li>
-        <li><b>Measure.</b> More interviews in Graham show what improved and where to go next.</li>
-      </ol>
-
-      <h3 class="sub-h">Client work delivered</h3>
-      <ul class="cards">
-        <li><h4>Lead automation</h4><p>Agents find possible leads, research each business and its LinkedIn presence, build the PowerPoint, book the meeting and brief the sales manager beforehand.</p></li>
-        <li><h4>Voice agent</h4><p>For a plumbing business: an agent that answers incoming calls so enquiries aren't missed while the team is out on jobs.</p></li>
-      </ul>
-    </div>
-  </section>
-
   <!-- ============ experience ============ -->
   <section id="work" class="section">
     <div class="wrap">
@@ -174,6 +120,53 @@
       </div>
 
       <ol class="timeline">
+        <li id="ddx">
+          <div class="when">May 2025 —<br><span>Present</span></div>
+          <div class="what">
+            <h3>Founder</h3>
+            <div class="where">DDX Consulting · <a href="https://ddx-consulting.com">ddx-consulting.com</a> · alongside Gategroup</div>
+            <p>A consultancy that helps clients run their operations better with AI. <b class="lead-in">Graham understands the company. Tally does the work.</b> Delivered for 50+ clients.</p>
+
+          <div class="dx" role="img" aria-label="Graham understands the company, DDX reviews, Tally does the work, then measure and repeat.">
+              <div class="dx-card">
+                <div class="dx-tag">Stage 1 · Understand</div>
+                <h4>Graham</h4>
+                <p class="dx-what">Interviews staff and reads documents to find where work breaks and where AI can help.</p>
+                <ul class="tiles">
+                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4M9.5 12h5M9.5 16h5"/></svg>Documents</li>
+                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H10l-4 4v-4H4z"/></svg>AI interviews</li>
+                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 16v-4M12 16V8M16 16v-6"/></svg>Report</li>
+                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="m20 20-4.5-4.5"/></svg>Ask Graham</li>
+                </ul>
+                <div class="dx-state">In build</div>
+              </div>
+              <div class="dx-mid">
+                <svg class="dx-arrow" viewBox="0 0 60 12" aria-hidden="true"><path d="M0 6h54M48 1l6 5-6 5"/></svg>
+                <div class="dx-gate"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6.5 9.5 17 4.5 12"/></svg></div>
+                <div class="dx-mid-label">DDX reviews</div>
+                <svg class="dx-arrow" viewBox="0 0 60 12" aria-hidden="true"><path d="M0 6h54M48 1l6 5-6 5"/></svg>
+              </div>
+              <div class="dx-card dx-card-b">
+                <div class="dx-tag">Stage 2 · Do</div>
+                <h4>Tally</h4>
+                <p class="dx-what">Builds the AI agents and automations that fix it, then runs them.</p>
+                <ul class="tiles">
+                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v4M12 17v4M3 12h4M17 12h4M6 6l2.5 2.5M15.5 15.5 18 18M18 6l-2.5 2.5M8.5 15.5 6 18"/></svg>Agents</li>
+                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="18" r="2.5"/><path d="M8.5 6H14a3 3 0 0 1 3 3v6.5"/></svg>Automations</li>
+                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H10l-4 4v-4H4z"/></svg>Run by chat</li>
+                  <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="5" cy="6" r="1.8"/><circle cx="19" cy="6" r="1.8"/><circle cx="5" cy="18" r="1.8"/><circle cx="19" cy="18" r="1.8"/><path d="M6.5 7l3.3 3.3M17.5 7l-3.3 3.3M6.5 17l3.3-3.3M17.5 17l-3.3-3.3"/></svg>Reads Graham's Brain</li>
+                </ul>
+                <div class="dx-state">Next</div>
+              </div>
+              <div class="dx-loop" aria-hidden="true">
+                <svg viewBox="0 0 800 40" preserveAspectRatio="none"><path d="M690 2v18H110V2" /><path d="M104 9l6-7 6 7"/></svg>
+                <span>Measure, then repeat</span>
+              </div>
+            </div>
+
+          </div>
+        </li>
+
         <li>
           <div class="when">Apr 2025 —<br><span>Present</span></div>
           <div class="what">
@@ -189,12 +182,52 @@
           </div>
         </li>
 
-        <li>
-          <div class="when">May 2025 —<br><span>Present</span></div>
+        <li id="apps">
+          <div class="when">Nov 2026 —<br><span>Present</span></div>
           <div class="what">
-            <h3>Founder</h3>
-            <div class="where">DDX Consulting · <a href="https://ddx-consulting.com">ddx-consulting.com</a> · alongside Gategroup</div>
-            <p>AI agents, intelligent automation and integration for clients, then running what we build. Built Graham and Tally, DDX's own products. <a href="#ddx">Details above.</a></p>
+            <h3>Reforge</h3>
+            <div class="where">Solo developer · Android app for daily discipline · <a href="https://dixon-change-your-life.expo.app">web preview</a></div>
+            <div class="status">Pre-launch testing</div>
+            <ul class="bullets">
+              <li>Tracks food with a photo calorie scan, plus training and weight, with a focus mode that blocks distracting apps, a place for promises and goals, and an AI coach.</li>
+              <li>React Native and Expo on the front, Supabase and Gemini behind it. AI use is capped per user on the server, so costs stay predictable.</li>
+              <li>Not on Google Play yet.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <div class="when">Nov 2026 —<br><span>Present</span></div>
+          <div class="what">
+            <h3>Vireault</h3>
+            <div class="where">Solo developer · Android encrypted vault · <a href="https://dixonchoi22.github.io/vireault-site/">vireault site</a></div>
+            <div class="status status-b">Heading into Play testing</div>
+            <ul class="bullets">
+              <li>Keeps photos, videos, files and notes on the phone with no account and no servers. Files use AES-256-GCM, keys come from Argon2id, and even file names are encrypted.</li>
+              <li>Native Kotlin and Jetpack Compose. I also built its marketing site in Astro.</li>
+              <li>Not on Google Play yet.</li>
+            </ul>
+          </div>
+        </li>
+
+        <li>
+          <div class="when">Mar 2026 —<br><span>Present</span></div>
+          <div class="what">
+            <h3>Chumi</h3>
+            <div class="where">Founder · AI pet-health app for Android · <a href="https://chumi.pet">chumi.pet</a></div>
+            <ul class="bullets">
+              <li>Started Chumi to cut preventable pet deaths. Too many owners only notice something is wrong when it's too late.</li>
+              <li>Built an AI triage assistant that helps owners understand what may be wrong with their pet and how urgent it is, early enough to act, and sends them to a vet when needed.</li>
+              <li>Founded it and built it alone, with nearby-vet search, pet health history and shareable reports.</li>
+            </ul>
+            <figure class="shots">
+              <div class="shot-row">
+                <img src="assets/chumi/chumi-home.jpg" width="440" height="978" loading="lazy" alt="Chumi home screen: the pet's daily check-in and an Ask Chumi prompt.">
+                <img src="assets/chumi/chumi-chat.jpg" width="440" height="978" loading="lazy" alt="Chumi's assistant opening on suggested symptoms to describe.">
+                <img src="assets/chumi/chumi-consult.jpg" width="440" height="978" loading="lazy" alt="A consultation in progress: the assistant asks whether the pet has been seen by a vet, with an urgency stripe on its reply.">
+              </div>
+              <figcaption>Chumi on Android: home, the assistant, and a consultation mid-flow.</figcaption>
+            </figure>
           </div>
         </li>
 
@@ -249,54 +282,6 @@
   </section>
 
   <!-- ============ apps ============ -->
-  <section id="apps" class="section section-alt">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="kicker">Apps · solo developer</div>
-        <h2>Apps I build on my own.</h2>
-        <p class="lede">I design, build and ship these myself, from the database and AI backend to the Android app and its website. React Native, Kotlin and TypeScript on the front, Postgres behind.</p>
-      </div>
-
-      <article class="app-feature">
-        <div class="app-copy">
-          <div class="status status-b">Founder · Mar 2026 — present</div>
-          <h3>Chumi</h3>
-          <p class="app-sub">AI pet-health app for Android</p>
-          <ul class="bullets">
-            <li>Started Chumi to cut preventable pet deaths. Too many owners only notice something is wrong when it's too late.</li>
-            <li>Built an AI triage assistant that helps owners understand what may be wrong with their pet and how urgent it is, early enough to act, and sends them to a vet when needed.</li>
-            <li>Founded it and built it alone, with nearby-vet search, pet health history and shareable reports.</li>
-          </ul>
-          <a class="visit" href="https://chumi.pet">Visit chumi.pet <span aria-hidden="true">→</span></a>
-        </div>
-        <figure class="shots">
-          <div class="shot-row">
-            <img src="assets/chumi/chumi-home.jpg" width="440" height="978" loading="lazy" alt="Chumi home screen: the pet's daily check-in and an Ask Chumi prompt.">
-            <img src="assets/chumi/chumi-chat.jpg" width="440" height="978" loading="lazy" alt="Chumi's assistant opening on suggested symptoms to describe.">
-            <img src="assets/chumi/chumi-consult.jpg" width="440" height="978" loading="lazy" alt="A consultation in progress: the assistant asks whether the pet has been seen by a vet, with an urgency stripe on its reply.">
-          </div>
-          <figcaption>Chumi on Android: home, the assistant, and a consultation mid-flow.</figcaption>
-        </figure>
-      </article>
-
-      <ul class="cards apps">
-        <li>
-          <div class="status">Pre-launch testing</div>
-          <h4>Reforge</h4>
-          <p>A daily discipline app. It tracks food with a photo calorie scan, plus training and weight, and has a focus mode that blocks distracting apps, a place for promises and goals, and an AI coach. React Native and Expo on the front, Supabase and Gemini behind it. AI use is capped per user on the server, so costs stay predictable. Not on Google Play yet.</p>
-          <a class="visit" href="https://dixon-change-your-life.expo.app">Try the web preview <span aria-hidden="true">→</span></a>
-        </li>
-        <li>
-          <div class="status status-b">Heading into Play testing</div>
-          <h4>Vireault</h4>
-          <p>An encrypted vault for photos, videos, files and notes that lives entirely on the phone, with no account and no servers. Files use AES-256-GCM, keys come from Argon2id, and even file names are encrypted. Native Kotlin and Jetpack Compose. I also built its marketing site in Astro. Not on Google Play yet.</p>
-          <a class="visit" href="https://dixonchoi22.github.io/vireault-site/">Visit the site <span aria-hidden="true">→</span></a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-
 </main>
 
 <!-- ============ contact ============ -->

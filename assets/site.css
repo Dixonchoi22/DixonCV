@@ -281,20 +281,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .skillset dd { font-size: 8.4pt; line-height: 1.35; }
 }
 
-/* ---------- v15: apps, solo developer ---------- */
-.app-feature { display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; align-items: center; margin-bottom: 20px; padding: 28px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); }
-.app-feature h3 { font-size: 40px; font-weight: 800; letter-spacing: -0.035em; line-height: 1; }
-.app-sub { margin: 6px 0 16px; font-size: 14px; color: var(--faint); }
-.app-feature .bullets { margin-top: 0; }
-.app-feature .shots { margin: 0; }
-.app-feature .shot-row { max-width: 400px; margin-left: auto; }
-.apps li { display: flex; flex-direction: column; }
-.apps li .visit { align-self: flex-start; margin-top: auto; }
-.apps li p { margin-bottom: 16px; }
-@media (max-width: 900px) { .app-feature { grid-template-columns: 1fr; gap: 22px; padding: 22px 18px; } .app-feature .shot-row { margin-left: 0; } }
-@media print { .app-feature { grid-template-columns: 1fr; padding: 8px 10px; break-inside: avoid; margin-bottom: 8px; } .app-feature h3 { font-size: 15pt; } .app-sub { margin-bottom: 4px; } .apps .visit { display: none; } }
-@media print { .contact { display: none; } }
-
 /* ---------- v17: education up top ---------- */
 .edu { padding: 34px 0; background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .edu-in { display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px 48px; align-items: center; }
@@ -326,3 +312,66 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .edu-row-2 h2 { font-size: clamp(18px, 2.2vw, 22px); }
 @media (max-width: 800px) { .edu-row { flex-direction: column; gap: 4px; } }
 @media print { .edu-row { padding: 4px 0; } .edu-row-2 h2 { font-size: 10.5pt; } }
+
+/* ---------- DDX inside the experience timeline (light) ---------- */
+.what .duo { grid-template-columns: 1fr; gap: 14px; margin-top: 18px; }
+.what .product { padding: 22px 22px 18px; border: 1px solid var(--line); background: var(--bg); }
+.what .product-tag { color: var(--blue); }
+.what .product-b .product-tag { color: var(--green); }
+.what .product h3 { color: var(--ink); font-size: 32px; }
+.what .product-lede { color: var(--dim); }
+.what .parts li { border-top-color: var(--line); }
+.what .parts h4 { color: var(--ink); }
+.what .parts h4::before { color: var(--blue); }
+.what .parts p { color: var(--dim); }
+.what .product-foot { color: var(--faint); border-top-color: var(--line-soft); }
+.what .demo-video { border-color: var(--line); }
+.what .demo figcaption { color: var(--faint); }
+.what .loop { grid-template-columns: 1fr; gap: 8px; margin-top: 20px; }
+.what .loop li { display: block; padding: 8px 12px; border-top: 0; border-left: 2px solid var(--blue); color: var(--dim); }
+.what .loop li::before { display: inline; margin: 0 8px 0 0; color: var(--blue); }
+.what .loop b { color: var(--ink); }
+.what .sub-h { margin: 26px 0 12px; color: var(--faint); }
+.what .cards { margin-top: 0; }
+.what .cards li { background: var(--bg); }
+.lead-in { color: var(--ink); font-weight: 600; }
+@media print { .what .product { padding: 6px 8px; } .what .product h3 { font-size: 13pt; } }
+
+/* ---------- DDX visual ---------- */
+.dx { position: relative; display: grid; grid-template-columns: 1fr 120px 1fr; align-items: stretch; gap: 0; margin: 22px 0 6px; padding-bottom: 54px; }
+.dx-card { padding: 20px 20px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); }
+.dx-tag { font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--blue); }
+.dx-card-b .dx-tag { color: var(--green); }
+.dx-card h4 { margin: 6px 0 14px; font-size: 34px; font-weight: 800; letter-spacing: -0.035em; line-height: 1; }
+.tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.tiles li { display: flex; flex-direction: column; gap: 6px; padding: 12px 10px; border: 1px solid var(--line); border-radius: 8px; background: var(--paper); font-size: 12.5px; font-weight: 600; line-height: 1.25; }
+.tiles svg { width: 22px; height: 22px; fill: none; stroke: var(--blue); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.dx-card-b .tiles svg { stroke: var(--green); }
+.dx-state { margin-top: 12px; font-size: 11.5px; color: var(--faint); font-family: var(--mono); }
+.dx-mid { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; }
+.dx-arrow { width: 60px; height: 12px; fill: none; stroke: #9b988b; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 5 5; animation: dxflow 1.1s linear infinite; }
+.dx-gate { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 6px var(--green-soft); }
+.dx-gate svg { width: 22px; height: 22px; fill: none; stroke: #fff; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.dx-mid-label { font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--green); text-align: center; }
+.dx-loop { position: absolute; left: 0; right: 0; bottom: 0; height: 44px; }
+.dx-loop svg { position: absolute; inset: 0; width: 100%; height: 100%; fill: none; stroke: #9b988b; stroke-width: 1.8; stroke-dasharray: 5 5; animation: dxflow 1.4s linear infinite; }
+.dx-loop span { position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); padding: 0 12px; background: var(--bg); font-family: var(--mono); font-size: 10.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--faint); }
+@keyframes dxflow { to { stroke-dashoffset: -20; } }
+@media (prefers-reduced-motion: reduce) { .dx-arrow, .dx-loop svg { animation: none; } }
+@media (max-width: 760px) {
+  .dx { grid-template-columns: 1fr; padding-bottom: 0; gap: 4px; }
+  .dx-mid { flex-direction: row; padding: 8px 0; gap: 12px; }
+  .dx-arrow { transform: rotate(90deg); width: 40px; }
+  .dx-mid .dx-arrow:last-child { display: none; }
+  .dx-loop { display: none; }
+}
+@media print { .dx { display: none; } }
+
+.dx-card h4 { margin-bottom: 8px; }
+.dx-what { margin: 0 0 14px; font-size: 13.5px; line-height: 1.5; color: var(--dim); min-height: 3em; }
+@media (max-width: 760px) { .dx-what { min-height: 0; } }
+
+
+.what .status { margin: 12px 0 0; }
+.what .status + .bullets { margin-top: 8px; }
+@media print { .what .status { margin-top: 4px; } }
