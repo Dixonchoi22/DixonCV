@@ -53,9 +53,11 @@ is named; so are the seven countries, the ~80 stakeholders, the ERP products in
 the stack diagram, and the agent, MCP and SRM work. What stays out is anything
 naming a supplier, a contract, a spend figure or an internal system URL.
 
-**Client work names no one.** The DDX site states that it names no client and
-quotes no real figure. If a client-work section is added later it has to follow
-that: anonymised by sector, e.g. "a UK logistics firm", never a company name.
+**Client work names no one.** DDX results are quoted as averages across clients
+(50+ clients, about 5 hours saved per person per week, over £15,000 ROI and
+savings per client per year, up to about £50,000 for one client), which Dixon
+asked for. Never name a client. Anything more specific has to be anonymised by
+sector, e.g. "a UK logistics firm".
 
 **The repositories behind the work are private.** Only three of Dixon's GitHub
 repositories are public, which is why nothing here links to source.
