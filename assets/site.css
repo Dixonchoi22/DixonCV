@@ -326,3 +326,27 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .edu-row-2 h2 { font-size: clamp(18px, 2.2vw, 22px); }
 @media (max-width: 800px) { .edu-row { flex-direction: column; gap: 4px; } }
 @media print { .edu-row { padding: 4px 0; } .edu-row-2 h2 { font-size: 10.5pt; } }
+
+/* ---------- DDX inside the experience timeline (light) ---------- */
+.what .duo { grid-template-columns: 1fr; gap: 14px; margin-top: 18px; }
+.what .product { padding: 22px 22px 18px; border: 1px solid var(--line); background: var(--bg); }
+.what .product-tag { color: var(--blue); }
+.what .product-b .product-tag { color: var(--green); }
+.what .product h3 { color: var(--ink); font-size: 32px; }
+.what .product-lede { color: var(--dim); }
+.what .parts li { border-top-color: var(--line); }
+.what .parts h4 { color: var(--ink); }
+.what .parts h4::before { color: var(--blue); }
+.what .parts p { color: var(--dim); }
+.what .product-foot { color: var(--faint); border-top-color: var(--line-soft); }
+.what .demo-video { border-color: var(--line); }
+.what .demo figcaption { color: var(--faint); }
+.what .loop { grid-template-columns: 1fr; gap: 8px; margin-top: 20px; }
+.what .loop li { display: block; padding: 8px 12px; border-top: 0; border-left: 2px solid var(--blue); color: var(--dim); }
+.what .loop li::before { display: inline; margin: 0 8px 0 0; color: var(--blue); }
+.what .loop b { color: var(--ink); }
+.what .sub-h { margin: 26px 0 12px; color: var(--faint); }
+.what .cards { margin-top: 0; }
+.what .cards li { background: var(--bg); }
+.lead-in { color: var(--ink); font-weight: 600; }
+@media print { .what .product { padding: 6px 8px; } .what .product h3 { font-size: 13pt; } }
