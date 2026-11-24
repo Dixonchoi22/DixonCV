@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <!-- Versioned so a stylesheet change reaches people who already have the old one cached. -->
-<link rel="stylesheet" href="assets/site.css?v=11">
+<link rel="stylesheet" href="assets/site.css?v=18">
 </head>
 <body>
 
@@ -22,7 +22,7 @@
     </a>
     <nav class="nav" aria-label="Sections">
       <a href="#approach">Approach</a>
-      <a href="#stack">Architecture</a>
+      <a href="#stack">How it works</a>
       <a href="#ddx">DDX</a>
       <a href="#work">Experience</a>
       <a href="#apps">Apps</a>
@@ -37,10 +37,15 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="tick"></span>Digital transformation lead · London</div>
-        <h1>Digital <em>transformation</em></h1>
+        <div class="hero-id">
+          <img class="portrait" src="assets/dixon.jpg" srcset="assets/dixon.jpg 1x, assets/dixon@2x.jpg 2x" width="168" height="168" alt="Dixon Choi">
+          <div>
+            <div class="eyebrow"><span class="tick"></span>Digital transformation lead · London</div>
+            <h1>Digital <em>transformation</em></h1>
+          </div>
+        </div>
         <p class="hero-lede">I'm the technical lead of a two-person digital transformation team at Gategroup, covering seven European countries and 80+ colleagues. I find the problem, build the fix and run the rollout myself. The fixes are AI agents, intelligent automation and data work.</p>
-        <p class="hero-sub">I also run <a href="https://ddx-consulting.com">DDX Consulting</a>, which builds AI agents and automation for clients and then operates them, and I build <a href="#apps">Android apps</a>.</p>
+        <p class="hero-sub">I also run <a href="https://ddx-consulting.com">DDX Consulting</a>, which builds AI agents and automation for clients and then operates them, and I build <a href="#apps">Android apps</a> as a solo developer.</p>
         <div class="hero-actions">
           <a class="btn" href="assets/Dixon-Choi-CV.pdf" download>Download CV</a>
           <a class="btn btn-ghost" href="#contact">Get in touch</a>
@@ -51,21 +56,15 @@
         <div class="skillset-head">Skill set</div>
         <dl>
           <div><dt><span class="dot"></span>AI agents &amp; automation</dt><dd>LLM agents · MCP servers · GenAI solution design · Intelligent automation · Prompt engineering · n8n · Power Automate</dd></div>
-          <div><dt><span class="dot dot-b"></span>Data &amp; BI</dt><dd>Power BI · Power Query · DAX · SQL · Python (pandas) · Tableau</dd></div>
-          <div><dt><span class="dot dot-c"></span>Business systems</dt><dd>SAP · Dynamics 365 · SharePoint · Power Platform</dd></div>
-          <div><dt><span class="dot dot-d"></span>Delivery</dt><dd>Process design · Requirements · UAT · Rollout &amp; training · Change management</dd></div>
-          <div><dt><span class="dot dot-e"></span>Build</dt><dd>TypeScript · React Native · Kotlin · Postgres</dd></div>
+          <div><dt><span class="dot dot-b"></span>Data &amp; BI</dt><dd>Power BI · Power Query (M) · DAX · SQL · Python (pandas) · Tableau · GIS · ML forecasting</dd></div>
+          <div><dt><span class="dot dot-c"></span>Procurement &amp; systems</dt><dd>SAP · Dynamics 365 · SharePoint · Power Platform · Source-to-Pay · Spend analytics · Supplier relationship management</dd></div>
+          <div><dt><span class="dot dot-d"></span>Delivery</dt><dd>Process design · Requirements · UAT · Rollout &amp; training · Change management · Agile · Jira</dd></div>
+          <div><dt><span class="dot dot-e"></span>Build</dt><dd>TypeScript · Next.js · React · React Native · Kotlin · Postgres · Git</dd></div>
         </dl>
       </aside>
     </div>
 
     <div class="wrap">
-      <ul class="proof">
-        <li><b>7</b><span>European countries covered at Gategroup</span></li>
-        <li><b>80+</b><span>colleagues supported</span></li>
-        <li><b>60+</b><span>stakeholders on the SRM scorecards</span></li>
-        <li><b>50+</b><span>clients automated through DDX</span></li>
-      </ul>
       <ul class="meta">
         <li><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.4-7-10.5A7 7 0 0 1 19 10.5C19 15.6 12 21 12 21Z"/><circle cx="12" cy="10.5" r="2.5"/></svg>London, UK</li>
         <li><svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2"/><path d="m3 6.5 9 6 9-6"/></svg><a href="mailto:choimanto62@gmail.com">choimanto62@gmail.com</a></li>
@@ -75,13 +74,25 @@
     </div>
   </section>
 
+  <!-- ============ education ============ -->
+  <section class="edu" aria-label="Education">
+    <div class="wrap edu-in">
+      <div class="edu-main">
+        <div class="kicker">Education</div>
+        <h2>BSc Computer Science with Artificial Intelligence</h2>
+        <p class="edu-where">University of Leeds, UK · Oct 2019 — Jun 2023</p>
+      </div>
+      <p class="edu-fit">A computer science and AI degree, applied to digital transformation: I understand the business process and I build the technology that changes it.</p>
+      <p class="edu-also">Before that: Foundation Degree in Science and GCSEs, Chase Grammar School, UK · Sep 2018 — Jun 2019</p>
+    </div>
+  </section>
+
   <!-- ============ approach ============ -->
   <section id="approach" class="section">
     <div class="wrap">
       <div class="section-head">
         <div class="kicker">Approach</div>
         <h2>Process first, technology second.</h2>
-        <p class="lede">I work out how the work really happens and where the gaps are, then apply AI agents, intelligent automation and integration, and run what we build.</p>
       </div>
       <ol class="phases">
         <li><span class="n">01</span><h3>Discover</h3><p>Interview the people doing the work. Map the real process, where the time goes and where it hurts.</p><span class="tag">Graham</span></li>
@@ -97,33 +108,64 @@
   <section id="stack" class="section section-alt">
     <div class="wrap">
       <div class="section-head">
-        <div class="kicker">Architecture</div>
-        <h2>The stack I run.</h2>
-        <p class="lede">Source systems on the left, the automation layer in the middle, the decision on the right. I set what connects to what, and nothing reaches the outside world without a person approving it.</p>
+        <div class="kicker">How it works</div>
+        <h2>RAG answers. Agents act.</h2>
+        <p class="lede">The two get mixed up a lot. RAG lets an AI answer from a company's own documents. An agent goes further: it decides what to do next, uses tools, and stops for a person before anything goes out. I build both, and my agents use RAG as one of their tools.</p>
       </div>
-      <div class="flow">
-        <div class="flow-col">
-          <div class="flow-label">Source systems</div>
-          <div class="chip-card">SAP</div>
-          <div class="chip-card">Dynamics 365</div>
-          <div class="chip-card">SharePoint</div>
-          <div class="chip-card">Excel · Power Query</div>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
-        <div class="flow-col flow-hub">
-          <div class="flow-label">Automation layer</div>
-          <div class="hub">
-            <div class="hub-title">LLM agents &amp; MCP servers</div>
-            <div class="hub-tools"><span>Claude</span><span>Agent SDK</span><span>MCP</span><span>n8n</span><span>Power Automate</span><span>Python</span></div>
+
+      <div class="how">
+        <article class="how-card">
+          <div class="how-tag">RAG · retrieval-augmented generation</div>
+          <h3>Answer from your own documents, with the source</h3>
+          <p class="how-q"><span>Question</span>What's the notice period in our packaging supplier's contract?</p>
+
+          <div class="lane">
+            <div class="lane-label">Prepared once</div>
+            <ol class="pipe">
+              <li style="--i:0"><b>Documents</b><span>Contracts, policies, SOPs</span></li>
+              <li style="--i:1"><b>Split</b><span>Cut into short passages</span></li>
+              <li style="--i:2"><b>Embed</b><span>Turn each passage into numbers that capture its meaning</span></li>
+              <li style="--i:3"><b>Index</b><span>Store them so they can be searched by meaning</span></li>
+            </ol>
           </div>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
-        <div class="flow-col">
-          <div class="flow-label">Decision</div>
-          <div class="chip-card">Power BI</div>
-          <div class="chip-card chip-ok">Human approval</div>
-          <div class="chip-card">Teams · Outlook</div>
-        </div>
+          <div class="lane">
+            <div class="lane-label">Every question</div>
+            <ol class="pipe">
+              <li style="--i:4"><b>Question</b><span>Turned into numbers the same way</span></li>
+              <li style="--i:5"><b>Retrieve</b><span>Find the few passages closest in meaning</span></li>
+              <li style="--i:6"><b>Generate</b><span>The model reads only those passages and writes the answer</span></li>
+              <li style="--i:7" class="is-out"><b>Answer</b><span>"90 days' written notice" · Contract §14.2</span></li>
+            </ol>
+          </div>
+          <p class="how-note">The model answers from your text, not from memory, so a person can check the source.</p>
+        </article>
+
+        <article class="how-card how-card-agent">
+          <div class="how-tag how-tag-b">AI agent</div>
+          <h3>Pursue a goal: plan, use tools, check, hand over</h3>
+          <p class="how-q"><span>Goal</span>Find alternatives for a packaging supplier we want to replace.</p>
+
+          <ol class="trace">
+            <li style="--j:0"><i>1</i><div><b>Plan</b><span>I need current spend, then candidate suppliers, then their contract terms.</span></div></li>
+            <li style="--j:1"><i>2</i><div><b>Tool · spend data</b><span>Pulls the last 12 months for the category from the ERP.</span></div></li>
+            <li style="--j:2"><i>3</i><div><b>Tool · supplier search</b><span>Returns candidates that meet the criteria.</span></div></li>
+            <li style="--j:3"><i>4</i><div><b>Tool · RAG</b><span>Reads each candidate's terms from the document library.</span></div></li>
+            <li style="--j:4"><i>5</i><div><b>Draft</b><span>Writes a comparison, every line with its source.</span></div></li>
+            <li style="--j:5" class="is-gate"><i>✓</i><div><b>Human approval</b><span>A person reviews it. Nothing leaves without a yes.</span></div></li>
+          </ol>
+          <div class="loop-note"><span>Think</span><em>→</em><span>Act</span><em>→</em><span>Observe</span><em>↺</em> repeat until the goal is met</div>
+        </article>
+      </div>
+
+      <p class="how-foot">Illustrative example, based on the contract review and supplier discovery agents I build for procurement.</p>
+
+      <div class="wired" aria-label="What the agents connect to">
+        <span class="wired-label">Connected to</span>
+        <span class="wired-group">SAP</span><span class="wired-group">Dynamics 365</span><span class="wired-group">SharePoint</span><span class="wired-group">Excel · Power Query</span>
+        <em aria-hidden="true">→</em>
+        <span class="wired-group wired-core">Claude · MCP · n8n · Power Automate · Python</span>
+        <em aria-hidden="true">→</em>
+        <span class="wired-group">Power BI</span><span class="wired-group">Teams · Outlook</span>
       </div>
     </div>
   </section>
@@ -217,28 +259,6 @@
         </li>
 
         <li>
-          <div class="when">Mar 2026 —<br><span>Present</span></div>
-          <div class="what">
-            <h3>Founder</h3>
-            <div class="where">Chumi · <a href="https://chumi.pet">chumi.pet</a> · AI pet-health app, side project</div>
-            <ul class="bullets">
-              <li>Started Chumi to cut preventable pet deaths. Too many owners only notice something is wrong when it's too late.</li>
-              <li>Built an AI triage assistant that helps owners understand what may be wrong with their pet and how urgent it is, early enough to act, and sends them to a vet when needed.</li>
-              <li>Founded it and built it alone as an Android app, with nearby-vet search, pet health history and shareable reports.</li>
-            </ul>
-            <figure class="shots">
-              <div class="shot-row">
-                <img src="assets/chumi/chumi-home.jpg" width="440" height="978" loading="lazy" alt="Chumi home screen: the pet's daily check-in and an Ask Chumi prompt.">
-                <img src="assets/chumi/chumi-chat.jpg" width="440" height="978" loading="lazy" alt="Chumi's assistant opening on suggested symptoms to describe.">
-                <img src="assets/chumi/chumi-consult.jpg" width="440" height="978" loading="lazy" alt="A consultation in progress: the assistant asks whether the pet has been seen by a vet, with an urgency stripe on its reply.">
-              </div>
-              <figcaption>Chumi on Android: home, the assistant, and a consultation mid-flow.</figcaption>
-            </figure>
-            <a class="visit" href="https://chumi.pet">Visit the site — chumi.pet <span aria-hidden="true">→</span></a>
-          </div>
-        </li>
-
-        <li>
           <div class="when">Sep 2024 —<br><span>Dec 2024</span></div>
           <div class="what">
             <h3>Graduate Data Analyst</h3>
@@ -292,73 +312,50 @@
   <section id="apps" class="section section-alt">
     <div class="wrap">
       <div class="section-head">
-        <div class="kicker">Apps</div>
-        <h2>More apps I've built.</h2>
-        <p class="lede">Android apps I build on my own, alongside Chumi. Reforge and Vireault are not on Google Play yet.</p>
+        <div class="kicker">Apps · solo developer</div>
+        <h2>Apps I build on my own.</h2>
+        <p class="lede">I design, build and ship these myself, from the database and AI backend to the Android app and its website. React Native, Kotlin and TypeScript on the front, Postgres behind.</p>
       </div>
+
+      <article class="app-feature">
+        <div class="app-copy">
+          <div class="status status-b">Founder · Mar 2026 — present</div>
+          <h3>Chumi</h3>
+          <p class="app-sub">AI pet-health app for Android</p>
+          <ul class="bullets">
+            <li>Started Chumi to cut preventable pet deaths. Too many owners only notice something is wrong when it's too late.</li>
+            <li>Built an AI triage assistant that helps owners understand what may be wrong with their pet and how urgent it is, early enough to act, and sends them to a vet when needed.</li>
+            <li>Founded it and built it alone, with nearby-vet search, pet health history and shareable reports.</li>
+          </ul>
+          <a class="visit" href="https://chumi.pet">Visit chumi.pet <span aria-hidden="true">→</span></a>
+        </div>
+        <figure class="shots">
+          <div class="shot-row">
+            <img src="assets/chumi/chumi-home.jpg" width="440" height="978" loading="lazy" alt="Chumi home screen: the pet's daily check-in and an Ask Chumi prompt.">
+            <img src="assets/chumi/chumi-chat.jpg" width="440" height="978" loading="lazy" alt="Chumi's assistant opening on suggested symptoms to describe.">
+            <img src="assets/chumi/chumi-consult.jpg" width="440" height="978" loading="lazy" alt="A consultation in progress: the assistant asks whether the pet has been seen by a vet, with an urgency stripe on its reply.">
+          </div>
+          <figcaption>Chumi on Android: home, the assistant, and a consultation mid-flow.</figcaption>
+        </figure>
+      </article>
+
       <ul class="cards apps">
         <li>
           <div class="status">Pre-launch testing</div>
           <h4>Reforge</h4>
-          <p>A daily discipline app. It tracks food with a photo calorie scan, plus training and weight, and has a focus mode that blocks distracting apps, a place for promises and goals, and an AI coach. React Native and Expo on the front, Supabase and Gemini behind it. AI use is capped per user on the server, so costs stay predictable.</p>
+          <p>A daily discipline app. It tracks food with a photo calorie scan, plus training and weight, and has a focus mode that blocks distracting apps, a place for promises and goals, and an AI coach. React Native and Expo on the front, Supabase and Gemini behind it. AI use is capped per user on the server, so costs stay predictable. Not on Google Play yet.</p>
+          <a class="visit" href="https://dixon-change-your-life.expo.app">Try the web preview <span aria-hidden="true">→</span></a>
         </li>
         <li>
           <div class="status status-b">Heading into Play testing</div>
           <h4>Vireault</h4>
-          <p>An encrypted vault for photos, videos, files and notes that lives entirely on the phone, with no account and no servers. Files use AES-256-GCM, keys come from Argon2id, and even file names are encrypted. Native Kotlin and Jetpack Compose. I also built its marketing site in Astro.</p>
+          <p>An encrypted vault for photos, videos, files and notes that lives entirely on the phone, with no account and no servers. Files use AES-256-GCM, keys come from Argon2id, and even file names are encrypted. Native Kotlin and Jetpack Compose. I also built its marketing site in Astro. Not on Google Play yet.</p>
+          <a class="visit" href="https://dixonchoi22.github.io/vireault-site/">Visit the site <span aria-hidden="true">→</span></a>
         </li>
       </ul>
     </div>
   </section>
 
-  <!-- ============ skills ============ -->
-  <section id="skills" class="section">
-    <div class="wrap">
-      <div class="section-head">
-        <div class="kicker">Skills</div>
-        <h2>Tools I ship with.</h2>
-      </div>
-      <div class="skills">
-        <div class="skill-group">
-          <h3><span class="rule"></span>AI &amp; automation</h3>
-          <ul class="chips"><li>AI agents · LLM agents</li><li>MCP servers</li><li>GenAI solution design</li><li>Prompt engineering</li><li>Intelligent automation</li><li>n8n</li><li>Power Automate</li></ul>
-        </div>
-        <div class="skill-group">
-          <h3><span class="rule rule-b"></span>Data &amp; BI</h3>
-          <ul class="chips"><li>Power BI</li><li>Power Query (M)</li><li>DAX</li><li>SQL</li><li>Python · pandas</li><li>Tableau</li><li>GIS</li><li>ML forecasting</li></ul>
-        </div>
-        <div class="skill-group">
-          <h3><span class="rule"></span>Procurement &amp; systems</h3>
-          <ul class="chips"><li>SAP</li><li>Dynamics 365</li><li>SharePoint</li><li>Power Platform</li><li>Source-to-Pay / P2P</li><li>Spend analytics</li><li>Supplier relationship management</li><li>KPI frameworks</li></ul>
-        </div>
-        <div class="skill-group">
-          <h3><span class="rule rule-b"></span>Delivery</h3>
-          <ul class="chips"><li>Requirements gathering</li><li>Process design</li><li>UAT</li><li>Rollout &amp; training</li><li>Change management</li><li>Stakeholder engagement</li><li>Agile · Jira</li></ul>
-        </div>
-        <div class="skill-group">
-          <h3><span class="rule"></span>Build</h3>
-          <ul class="chips"><li>TypeScript</li><li>Next.js</li><li>React</li><li>Postgres</li><li>React Native · Expo</li><li>Kotlin</li><li>Git</li></ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ education ============ -->
-  <section class="section section-alt">
-    <div class="wrap">
-      <div class="section-head"><div class="kicker">Education</div></div>
-      <ol class="timeline compact">
-        <li>
-          <div class="when">Oct 2019 —<br><span>Jun 2023</span></div>
-          <div class="what"><h3>BSc Computer Science with Artificial Intelligence</h3><div class="where">University of Leeds, UK</div></div>
-        </li>
-        <li>
-          <div class="when">Sep 2018 —<br><span>Jun 2019</span></div>
-          <div class="what"><h3>Foundation Degree in Science; GCSEs</h3><div class="where">Chase Grammar School, UK</div></div>
-        </li>
-      </ol>
-    </div>
-  </section>
 
 </main>
 
