@@ -322,3 +322,16 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .pipe { grid-template-columns: 1fr; gap: 14px; }
   .pipe li:not(:last-child)::after { right: auto; left: 50%; top: auto; bottom: -11px; transform: translateX(-50%) rotate(135deg); }
 }
+
+/* ---------- v15: apps, solo developer ---------- */
+.app-feature { display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; align-items: center; margin-bottom: 20px; padding: 28px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); }
+.app-feature h3 { font-size: 40px; font-weight: 800; letter-spacing: -0.035em; line-height: 1; }
+.app-sub { margin: 6px 0 16px; font-size: 14px; color: var(--faint); }
+.app-feature .bullets { margin-top: 0; }
+.app-feature .shots { margin: 0; }
+.app-feature .shot-row { max-width: 400px; margin-left: auto; }
+.apps li { display: flex; flex-direction: column; }
+.apps li .visit { align-self: flex-start; margin-top: auto; }
+.apps li p { margin-bottom: 16px; }
+@media (max-width: 900px) { .app-feature { grid-template-columns: 1fr; gap: 22px; padding: 22px 18px; } .app-feature .shot-row { margin-left: 0; } }
+@media print { .app-feature { grid-template-columns: 1fr; padding: 8px 10px; break-inside: avoid; margin-bottom: 8px; } .app-feature h3 { font-size: 15pt; } .app-sub { margin-bottom: 4px; } .apps .visit { display: none; } }
