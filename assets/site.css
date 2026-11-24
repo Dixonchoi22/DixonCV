@@ -281,20 +281,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .skillset dd { font-size: 8.4pt; line-height: 1.35; }
 }
 
-/* ---------- v15: apps, solo developer ---------- */
-.app-feature { display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; align-items: center; margin-bottom: 20px; padding: 28px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); }
-.app-feature h3 { font-size: 40px; font-weight: 800; letter-spacing: -0.035em; line-height: 1; }
-.app-sub { margin: 6px 0 16px; font-size: 14px; color: var(--faint); }
-.app-feature .bullets { margin-top: 0; }
-.app-feature .shots { margin: 0; }
-.app-feature .shot-row { max-width: 400px; margin-left: auto; }
-.apps li { display: flex; flex-direction: column; }
-.apps li .visit { align-self: flex-start; margin-top: auto; }
-.apps li p { margin-bottom: 16px; }
-@media (max-width: 900px) { .app-feature { grid-template-columns: 1fr; gap: 22px; padding: 22px 18px; } .app-feature .shot-row { margin-left: 0; } }
-@media print { .app-feature { grid-template-columns: 1fr; padding: 8px 10px; break-inside: avoid; margin-bottom: 8px; } .app-feature h3 { font-size: 15pt; } .app-sub { margin-bottom: 4px; } .apps .visit { display: none; } }
-@media print { .contact { display: none; } }
-
 /* ---------- v17: education up top ---------- */
 .edu { padding: 34px 0; background: var(--paper); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .edu-in { display: grid; grid-template-columns: 1.2fr 1fr; gap: 12px 48px; align-items: center; }
@@ -385,9 +371,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .dx-what { margin: 0 0 14px; font-size: 13.5px; line-height: 1.5; color: var(--dim); min-height: 3em; }
 @media (max-width: 760px) { .dx-what { min-height: 0; } }
 
-/* apps inside the experience timeline */
-.what .app-feature { grid-template-columns: 1fr; gap: 20px; padding: 22px; margin: 18px 0 14px; align-items: start; }
-.what .app-feature h3 { font-size: 30px; }
-.what .app-feature .shot-row { margin-left: 0; }
-.what .apps { margin-top: 0; }
-@media print { .what .app-feature { padding: 6px 8px; margin: 6px 0; } .what .app-feature h3 { font-size: 12pt; } }
+
+.what .status { margin: 12px 0 0; }
+.what .status + .bullets { margin-top: 8px; }
+@media print { .what .status { margin-top: 4px; } }
