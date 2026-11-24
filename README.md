@@ -16,7 +16,6 @@ sections, the demo video and the screenshots.
 |---|---|
 | `index.html` | The whole page. Content lives here, not in a template. |
 | `assets/site.css` | One stylesheet: screen, narrow, and the print rules that turn the page into the CV. No JavaScript on the page. |
-| `assets/tally/` | The Tally demo video, poster and captions, copied from the DDX site. |
 | `assets/chumi/` | Three Chumi screenshots, downscaled to 440px from the Play Store set in the Chumi repo (`screens/store-2026-07*`). Store art, so already public. |
 | `assets/Dixon-Choi-CV.pdf` | Generated, not hand-made. Regenerate with the command below. |
 | `.nojekyll` | Stops GitHub Pages running the files through Jekyll. |
