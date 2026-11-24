@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
 <!-- Versioned so a stylesheet change reaches people who already have the old one cached. -->
-<link rel="stylesheet" href="assets/site.css?v=13">
+<link rel="stylesheet" href="assets/site.css?v=14">
 </head>
 <body>
 
@@ -22,7 +22,7 @@
     </a>
     <nav class="nav" aria-label="Sections">
       <a href="#approach">Approach</a>
-      <a href="#stack">Architecture</a>
+      <a href="#stack">How it works</a>
       <a href="#ddx">DDX</a>
       <a href="#work">Experience</a>
       <a href="#apps">Apps</a>
@@ -90,33 +90,64 @@
   <section id="stack" class="section section-alt">
     <div class="wrap">
       <div class="section-head">
-        <div class="kicker">Architecture</div>
-        <h2>The stack I run.</h2>
-        <p class="lede">Source systems on the left, the automation layer in the middle, the decision on the right. I set what connects to what, and nothing reaches the outside world without a person approving it.</p>
+        <div class="kicker">How it works</div>
+        <h2>RAG answers. Agents act.</h2>
+        <p class="lede">The two get mixed up a lot. RAG lets an AI answer from a company's own documents. An agent goes further: it decides what to do next, uses tools, and stops for a person before anything goes out. I build both, and my agents use RAG as one of their tools.</p>
       </div>
-      <div class="flow">
-        <div class="flow-col">
-          <div class="flow-label">Source systems</div>
-          <div class="chip-card">SAP</div>
-          <div class="chip-card">Dynamics 365</div>
-          <div class="chip-card">SharePoint</div>
-          <div class="chip-card">Excel · Power Query</div>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
-        <div class="flow-col flow-hub">
-          <div class="flow-label">Automation layer</div>
-          <div class="hub">
-            <div class="hub-title">LLM agents &amp; MCP servers</div>
-            <div class="hub-tools"><span>Claude</span><span>Agent SDK</span><span>MCP</span><span>n8n</span><span>Power Automate</span><span>Python</span></div>
+
+      <div class="how">
+        <article class="how-card">
+          <div class="how-tag">RAG · retrieval-augmented generation</div>
+          <h3>Answer from your own documents, with the source</h3>
+          <p class="how-q"><span>Question</span>What's the notice period in our packaging supplier's contract?</p>
+
+          <div class="lane">
+            <div class="lane-label">Prepared once</div>
+            <ol class="pipe">
+              <li style="--i:0"><b>Documents</b><span>Contracts, policies, SOPs</span></li>
+              <li style="--i:1"><b>Split</b><span>Cut into short passages</span></li>
+              <li style="--i:2"><b>Embed</b><span>Turn each passage into numbers that capture its meaning</span></li>
+              <li style="--i:3"><b>Index</b><span>Store them so they can be searched by meaning</span></li>
+            </ol>
           </div>
-        </div>
-        <div class="flow-arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
-        <div class="flow-col">
-          <div class="flow-label">Decision</div>
-          <div class="chip-card">Power BI</div>
-          <div class="chip-card chip-ok">Human approval</div>
-          <div class="chip-card">Teams · Outlook</div>
-        </div>
+          <div class="lane">
+            <div class="lane-label">Every question</div>
+            <ol class="pipe">
+              <li style="--i:4"><b>Question</b><span>Turned into numbers the same way</span></li>
+              <li style="--i:5"><b>Retrieve</b><span>Find the few passages closest in meaning</span></li>
+              <li style="--i:6"><b>Generate</b><span>The model reads only those passages and writes the answer</span></li>
+              <li style="--i:7" class="is-out"><b>Answer</b><span>"90 days' written notice" · Contract §14.2</span></li>
+            </ol>
+          </div>
+          <p class="how-note">The model answers from your text, not from memory, so a person can check the source.</p>
+        </article>
+
+        <article class="how-card how-card-agent">
+          <div class="how-tag how-tag-b">AI agent</div>
+          <h3>Pursue a goal: plan, use tools, check, hand over</h3>
+          <p class="how-q"><span>Goal</span>Find alternatives for a packaging supplier we want to replace.</p>
+
+          <ol class="trace">
+            <li style="--j:0"><i>1</i><div><b>Plan</b><span>I need current spend, then candidate suppliers, then their contract terms.</span></div></li>
+            <li style="--j:1"><i>2</i><div><b>Tool · spend data</b><span>Pulls the last 12 months for the category from the ERP.</span></div></li>
+            <li style="--j:2"><i>3</i><div><b>Tool · supplier search</b><span>Returns candidates that meet the criteria.</span></div></li>
+            <li style="--j:3"><i>4</i><div><b>Tool · RAG</b><span>Reads each candidate's terms from the document library.</span></div></li>
+            <li style="--j:4"><i>5</i><div><b>Draft</b><span>Writes a comparison, every line with its source.</span></div></li>
+            <li style="--j:5" class="is-gate"><i>✓</i><div><b>Human approval</b><span>A person reviews it. Nothing leaves without a yes.</span></div></li>
+          </ol>
+          <div class="loop-note"><span>Think</span><em>→</em><span>Act</span><em>→</em><span>Observe</span><em>↺</em> repeat until the goal is met</div>
+        </article>
+      </div>
+
+      <p class="how-foot">Illustrative example, based on the contract review and supplier discovery agents I build for procurement.</p>
+
+      <div class="wired" aria-label="What the agents connect to">
+        <span class="wired-label">Connected to</span>
+        <span class="wired-group">SAP</span><span class="wired-group">Dynamics 365</span><span class="wired-group">SharePoint</span><span class="wired-group">Excel · Power Query</span>
+        <em aria-hidden="true">→</em>
+        <span class="wired-group wired-core">Claude · MCP · n8n · Power Automate · Python</span>
+        <em aria-hidden="true">→</em>
+        <span class="wired-group">Power BI</span><span class="wired-group">Teams · Outlook</span>
       </div>
     </div>
   </section>
