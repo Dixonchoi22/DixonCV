@@ -363,3 +363,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 920px) { .hero-id { gap: 20px; } .portrait { width: 132px; height: 132px; } }
 @media (max-width: 560px) { .hero-id { flex-direction: column; align-items: flex-start; gap: 18px; } .portrait { width: 120px; height: 120px; } }
 @media print { .hero-id { gap: 12px; } .portrait { width: 70px; height: 70px; box-shadow: none; } .hero-id h1 { font-size: 22pt; } }
+
+.edu-years { margin: 0; font-family: var(--mono); font-size: 15px; font-weight: 500; color: var(--ink); }
+@media (min-width: 801px) { .edu-years { text-align: right; } }
+@media print { .edu-years { font-size: 9.5pt; } }
