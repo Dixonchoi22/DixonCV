@@ -367,3 +367,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .edu-years { margin: 0; font-family: var(--mono); font-size: 15px; font-weight: 500; color: var(--ink); }
 @media (min-width: 801px) { .edu-years { text-align: right; } }
 @media print { .edu-years { font-size: 9.5pt; } }
+
+/* education rows */
+.edu .kicker { margin-bottom: 14px; }
+.edu-row { display: flex; align-items: baseline; justify-content: space-between; gap: 24px; padding: 14px 0; border-top: 1px solid var(--line-soft); }
+.edu-row:first-of-type { border-top: 0; padding-top: 0; }
+.edu-row-2 h2 { font-size: clamp(18px, 2.2vw, 22px); }
+@media (max-width: 800px) { .edu-row { flex-direction: column; gap: 4px; } }
+@media print { .edu-row { padding: 4px 0; } .edu-row-2 h2 { font-size: 10.5pt; } }
